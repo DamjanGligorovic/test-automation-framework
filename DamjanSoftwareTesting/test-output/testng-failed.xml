@@ -3,14 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="projectSasomangeLoginPage.TestSasomangeLoginPageClass">
+      <class name="projectPCPress.TestPCPressClass">
         <methods>
           <include name="testCase2"/>
-          <include name="closeDriver"/>
-          <include name="navigation"/>
           <include name="initialization"/>
+          <include name="deleteCookie"/>
+          <include name="navigation"/>
+          <include name="testCase1"/>
+          <include name="closeDriver"/>
         </methods>
-      </class> <!-- projectSasomangeLoginPage.TestSasomangeLoginPageClass -->
+      </class> <!-- projectPCPress.TestPCPressClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

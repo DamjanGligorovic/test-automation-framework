@@ -2,8 +2,9 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
+    <parameter name="testParam" value="TestValue"/>
     <classes>
-      <class name="projectPCPress.TestPCPressClass"/>
+      <class name="com.example.YourTestClass"/>
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test>
+</suite>

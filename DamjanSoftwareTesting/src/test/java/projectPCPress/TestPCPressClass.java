@@ -312,15 +312,14 @@ bookPage.clickOnTheXButton();
 public void testCase20(String amount1) {
 bookPage.clickOnTheButtonCheckbox();
 bookPage.typeIntoToTheFieldKolicina1(amount1);
-
 bookPage.clickOnTheButtonKupujem();
 bookPage.typeIntoTheFieldImeIPrezime("Marinko Matic Roksandovic");
-	bookPage.typeIntoTheFieldUlicaIBroj("Kuna 32");
-	bookPage.typeIntoTheFieldPostanskiBroj("11000");
-	bookPage.typeIntoTheFieldGrad("Beograd");
-	bookPage.typeIntoTheFieldTelefon("4930405405");
-	bookPage.typeIntoTheFieldEmail("rgerjgleovics2323@yahoo.com");
-	bookPage.clickOnTheButtonNarucujem();
+bookPage.typeIntoTheFieldUlicaIBroj("Kuna 32");
+bookPage.typeIntoTheFieldPostanskiBroj("11000");
+bookPage.typeIntoTheFieldGrad("Beograd");
+bookPage.typeIntoTheFieldTelefon("4930405405");
+bookPage.typeIntoTheFieldEmail("rgerjgleovics2323@yahoo.com");
+bookPage.clickOnTheButtonNarucujem();
 }
 @Test(priority = 21)
 public void testCase21() {

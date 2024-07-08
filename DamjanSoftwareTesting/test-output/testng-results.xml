@@ -1,45 +1,756 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="42" passed="40" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-25T14:49:39 CEST" name="Default suite" finished-at="2024-06-25T14:49:49 CEST" duration-ms="10268">
+  <suite started-at="2024-07-08T10:32:17 CEST" name="Default suite" finished-at="2024-07-08T10:34:41 CEST" duration-ms="143767">
     <groups>
     </groups>
-    <test started-at="2024-06-25T14:49:39 CEST" name="Default test" finished-at="2024-06-25T14:49:49 CEST" duration-ms="10268">
-      <class name="projectMyStore.TestScript">
-        <test-method is-config="true" signature="initialization()[pri:0, instance:projectMyStore.TestScript@6392827e]" started-at="2024-06-25T14:49:39 CEST" name="initialization" finished-at="2024-06-25T14:49:41 CEST" duration-ms="1879" status="PASS">
+    <test started-at="2024-07-08T10:32:17 CEST" name="Default test" finished-at="2024-07-08T10:34:41 CEST" duration-ms="143767">
+      <class name="projectPCPress.TestPCPressClass">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:17 CEST" name="initialization" finished-at="2024-07-08T10:32:19 CEST" duration-ms="1803" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method is-config="true" signature="navigation()[pri:0, instance:projectMyStore.TestScript@6392827e]" started-at="2024-06-25T14:49:41 CEST" name="navigation" finished-at="2024-06-25T14:49:43 CEST" duration-ms="2037" status="PASS">
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:19 CEST" name="navigation" finished-at="2024-07-08T10:32:22 CEST" duration-ms="2724" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigation -->
-        <test-method signature="verifyIframeOnTheSecondPage()[pri:1, instance:projectMyStore.TestScript@6392827e]" started-at="2024-06-25T14:49:43 CEST" name="verifyIframeOnTheSecondPage" finished-at="2024-06-25T14:49:48 CEST" duration-ms="4941" status="PASS">
+        <test-method signature="testCase1()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:22 CEST" name="testCase1" finished-at="2024-07-08T10:32:24 CEST" duration-ms="2270" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [false] but found [true]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at projectPCPress.TestPCPressClass.testCase1(TestPCPressClass.java:44)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyIframeOnTheSecondPage -->
-        <test-method is-config="true" signature="navigation()[pri:0, instance:projectMyStore.TestScript@6392827e]" started-at="2024-06-25T14:49:48 CEST" name="navigation" finished-at="2024-06-25T14:49:48 CEST" duration-ms="209" status="PASS">
+        </test-method> <!-- testCase1 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:24 CEST" name="deleteCookie" finished-at="2024-07-08T10:32:24 CEST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:24 CEST" name="navigation" finished-at="2024-07-08T10:32:25 CEST" duration-ms="481" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigation -->
-        <test-method signature="verifyPriceOnTheSecondPageOfItem()[pri:2, instance:projectMyStore.TestScript@6392827e]" started-at="2024-06-25T14:49:48 CEST" name="verifyPriceOnTheSecondPageOfItem" finished-at="2024-06-25T14:49:49 CEST" duration-ms="384" status="PASS">
+        <test-method signature="testCase2()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:25 CEST" name="testCase2" finished-at="2024-07-08T10:32:29 CEST" duration-ms="3973" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [false] but found [true]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at projectPCPress.TestPCPressClass.testCase2(TestPCPressClass.java:65)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyPriceOnTheSecondPageOfItem -->
-        <test-method is-config="true" signature="navigation()[pri:0, instance:projectMyStore.TestScript@6392827e]" started-at="2024-06-25T14:49:49 CEST" name="navigation" finished-at="2024-06-25T14:49:49 CEST" duration-ms="180" status="PASS">
+        </test-method> <!-- testCase2 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:29 CEST" name="deleteCookie" finished-at="2024-07-08T10:32:29 CEST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:29 CEST" name="navigation" finished-at="2024-07-08T10:32:29 CEST" duration-ms="493" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigation -->
-        <test-method signature="verifyTitleOnTheSecondPageOfItem()[pri:3, instance:projectMyStore.TestScript@6392827e]" started-at="2024-06-25T14:49:49 CEST" name="verifyTitleOnTheSecondPageOfItem" finished-at="2024-06-25T14:49:49 CEST" duration-ms="380" status="PASS">
+        <test-method signature="testCase20(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:29 CEST" name="testCase20" data-provider="incorrectKolicinaData" finished-at="2024-07-08T10:32:32 CEST" duration-ms="2505" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTitleOnTheSecondPageOfItem -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:projectMyStore.TestScript@6392827e]" started-at="2024-06-25T14:49:49 CEST" name="closeDriver" finished-at="2024-06-25T14:49:49 CEST" duration-ms="218" status="PASS">
+        </test-method> <!-- testCase20 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:32 CEST" name="deleteCookie" finished-at="2024-07-08T10:32:32 CEST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:32 CEST" name="navigation" finished-at="2024-07-08T10:32:33 CEST" duration-ms="1291" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase20(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:33 CEST" name="testCase20" data-provider="incorrectKolicinaData" finished-at="2024-07-08T10:32:35 CEST" duration-ms="2396" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[102]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase20 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:35 CEST" name="deleteCookie" finished-at="2024-07-08T10:32:35 CEST" duration-ms="52" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:35 CEST" name="navigation" finished-at="2024-07-08T10:32:36 CEST" duration-ms="756" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase20(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:36 CEST" name="testCase20" data-provider="incorrectKolicinaData" finished-at="2024-07-08T10:32:39 CEST" duration-ms="2483" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[99]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase20 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:39 CEST" name="deleteCookie" finished-at="2024-07-08T10:32:39 CEST" duration-ms="55" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:39 CEST" name="navigation" finished-at="2024-07-08T10:32:39 CEST" duration-ms="681" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase20(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:39 CEST" name="testCase20" data-provider="incorrectKolicinaData" finished-at="2024-07-08T10:32:42 CEST" duration-ms="2568" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[101]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase20 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:42 CEST" name="deleteCookie" finished-at="2024-07-08T10:32:42 CEST" duration-ms="46" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:42 CEST" name="navigation" finished-at="2024-07-08T10:32:43 CEST" duration-ms="785" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase23(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:43 CEST" name="testCase23" data-provider="incorrectName" finished-at="2024-07-08T10:32:45 CEST" duration-ms="2176" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Daki ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase23 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:45 CEST" name="deleteCookie" finished-at="2024-07-08T10:32:45 CEST" duration-ms="50" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:45 CEST" name="navigation" finished-at="2024-07-08T10:32:46 CEST" duration-ms="725" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase23(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:46 CEST" name="testCase23" data-provider="incorrectName" finished-at="2024-07-08T10:32:48 CEST" duration-ms="2214" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ Markovic]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase23 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:48 CEST" name="deleteCookie" finished-at="2024-07-08T10:32:48 CEST" duration-ms="63" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:48 CEST" name="navigation" finished-at="2024-07-08T10:32:49 CEST" duration-ms="731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase23(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:49 CEST" name="testCase23" data-provider="incorrectName" finished-at="2024-07-08T10:32:51 CEST" duration-ms="2193" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase23 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:51 CEST" name="deleteCookie" finished-at="2024-07-08T10:32:51 CEST" duration-ms="58" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:51 CEST" name="navigation" finished-at="2024-07-08T10:32:52 CEST" duration-ms="697" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase23(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:52 CEST" name="testCase23" data-provider="incorrectName" finished-at="2024-07-08T10:32:54 CEST" duration-ms="2500" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[+!?23%/@#> .435sdsd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase23 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:54 CEST" name="deleteCookie" finished-at="2024-07-08T10:32:54 CEST" duration-ms="106" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:54 CEST" name="navigation" finished-at="2024-07-08T10:32:55 CEST" duration-ms="693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase24(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:55 CEST" name="testCase24" data-provider="incorrectUlicaIBroj" finished-at="2024-07-08T10:32:57 CEST" duration-ms="2275" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Obrenoviceva ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase24 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:57 CEST" name="deleteCookie" finished-at="2024-07-08T10:32:57 CEST" duration-ms="51" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:57 CEST" name="navigation" finished-at="2024-07-08T10:32:58 CEST" duration-ms="718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase24(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:32:58 CEST" name="testCase24" data-provider="incorrectUlicaIBroj" finished-at="2024-07-08T10:33:01 CEST" duration-ms="3294" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ 21]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase24 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:01 CEST" name="deleteCookie" finished-at="2024-07-08T10:33:01 CEST" duration-ms="38" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:01 CEST" name="navigation" finished-at="2024-07-08T10:33:02 CEST" duration-ms="698" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase24(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:02 CEST" name="testCase24" data-provider="incorrectUlicaIBroj" finished-at="2024-07-08T10:33:04 CEST" duration-ms="1793" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase24 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:04 CEST" name="deleteCookie" finished-at="2024-07-08T10:33:04 CEST" duration-ms="48" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:04 CEST" name="navigation" finished-at="2024-07-08T10:33:05 CEST" duration-ms="739" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase24(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:05 CEST" name="testCase24" data-provider="incorrectUlicaIBroj" finished-at="2024-07-08T10:33:07 CEST" duration-ms="2061" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[+%>/@#> .5sdsd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase24 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:07 CEST" name="deleteCookie" finished-at="2024-07-08T10:33:07 CEST" duration-ms="93" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:07 CEST" name="navigation" finished-at="2024-07-08T10:33:07 CEST" duration-ms="695" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase25(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:07 CEST" name="testCase25" data-provider="incorrectEmail" finished-at="2024-07-08T10:33:09 CEST" duration-ms="2024" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[damjangligorovic@.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase25 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:09 CEST" name="deleteCookie" finished-at="2024-07-08T10:33:09 CEST" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:09 CEST" name="navigation" finished-at="2024-07-08T10:33:10 CEST" duration-ms="970" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase25(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:10 CEST" name="testCase25" data-provider="incorrectEmail" finished-at="2024-07-08T10:33:12 CEST" duration-ms="1884" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[damjangligorovichotmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase25 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:12 CEST" name="deleteCookie" finished-at="2024-07-08T10:33:12 CEST" duration-ms="81" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:12 CEST" name="navigation" finished-at="2024-07-08T10:33:13 CEST" duration-ms="709" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase25(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:13 CEST" name="testCase25" data-provider="incorrectEmail" finished-at="2024-07-08T10:33:15 CEST" duration-ms="1792" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[@hotmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase25 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:15 CEST" name="deleteCookie" finished-at="2024-07-08T10:33:15 CEST" duration-ms="52" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:15 CEST" name="navigation" finished-at="2024-07-08T10:33:16 CEST" duration-ms="744" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase25(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:16 CEST" name="testCase25" data-provider="incorrectEmail" finished-at="2024-07-08T10:33:18 CEST" duration-ms="1811" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[damjangligorovic @]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase25 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:18 CEST" name="deleteCookie" finished-at="2024-07-08T10:33:18 CEST" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:18 CEST" name="navigation" finished-at="2024-07-08T10:33:18 CEST" duration-ms="697" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase25(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:18 CEST" name="testCase25" data-provider="incorrectEmail" finished-at="2024-07-08T10:33:20 CEST" duration-ms="2174" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[damjangligorovic@testing.hotmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase25 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:20 CEST" name="deleteCookie" finished-at="2024-07-08T10:33:20 CEST" duration-ms="45" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:20 CEST" name="navigation" finished-at="2024-07-08T10:33:21 CEST" duration-ms="719" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase27(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:21 CEST" name="testCase27" data-provider="incorrectTelefon" finished-at="2024-07-08T10:33:23 CEST" duration-ms="2201" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[23819292]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase27 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:23 CEST" name="deleteCookie" finished-at="2024-07-08T10:33:23 CEST" duration-ms="47" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:23 CEST" name="navigation" finished-at="2024-07-08T10:33:24 CEST" duration-ms="728" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase27(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:24 CEST" name="testCase27" data-provider="incorrectTelefon" finished-at="2024-07-08T10:33:26 CEST" duration-ms="2216" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[24591903723]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase27 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:26 CEST" name="deleteCookie" finished-at="2024-07-08T10:33:26 CEST" duration-ms="50" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:26 CEST" name="navigation" finished-at="2024-07-08T10:33:27 CEST" duration-ms="731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase27(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:27 CEST" name="testCase27" data-provider="incorrectTelefon" finished-at="2024-07-08T10:33:29 CEST" duration-ms="2046" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase27 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:29 CEST" name="deleteCookie" finished-at="2024-07-08T10:33:29 CEST" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:29 CEST" name="navigation" finished-at="2024-07-08T10:33:30 CEST" duration-ms="706" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase27(java.lang.String)[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:30 CEST" name="testCase27" data-provider="incorrectTelefon" finished-at="2024-07-08T10:33:32 CEST" duration-ms="2384" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[+!?$%^@#> .5sdsd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase27 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:32 CEST" name="deleteCookie" finished-at="2024-07-08T10:33:32 CEST" duration-ms="52" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:32 CEST" name="navigation" finished-at="2024-07-08T10:33:33 CEST" duration-ms="722" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase3()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:33 CEST" name="testCase3" finished-at="2024-07-08T10:33:36 CEST" duration-ms="2686" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase3 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:36 CEST" name="deleteCookie" finished-at="2024-07-08T10:33:36 CEST" duration-ms="39" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:36 CEST" name="navigation" finished-at="2024-07-08T10:33:37 CEST" duration-ms="718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase4()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:37 CEST" name="testCase4" finished-at="2024-07-08T10:33:39 CEST" duration-ms="2670" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase4 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:39 CEST" name="deleteCookie" finished-at="2024-07-08T10:33:39 CEST" duration-ms="50" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:39 CEST" name="navigation" finished-at="2024-07-08T10:33:40 CEST" duration-ms="717" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase5()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:40 CEST" name="testCase5" finished-at="2024-07-08T10:33:43 CEST" duration-ms="2759" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase5 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:43 CEST" name="deleteCookie" finished-at="2024-07-08T10:33:43 CEST" duration-ms="52" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:43 CEST" name="navigation" finished-at="2024-07-08T10:33:44 CEST" duration-ms="710" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase6()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:44 CEST" name="testCase6" finished-at="2024-07-08T10:33:46 CEST" duration-ms="2606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase6 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:46 CEST" name="deleteCookie" finished-at="2024-07-08T10:33:46 CEST" duration-ms="63" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:46 CEST" name="navigation" finished-at="2024-07-08T10:33:47 CEST" duration-ms="734" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase7()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:47 CEST" name="testCase7" finished-at="2024-07-08T10:33:52 CEST" duration-ms="5185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase7 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:52 CEST" name="deleteCookie" finished-at="2024-07-08T10:33:52 CEST" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:52 CEST" name="navigation" finished-at="2024-07-08T10:33:53 CEST" duration-ms="764" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase8()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:53 CEST" name="testCase8" finished-at="2024-07-08T10:33:54 CEST" duration-ms="1091" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase8 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:54 CEST" name="deleteCookie" finished-at="2024-07-08T10:33:54 CEST" duration-ms="45" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:54 CEST" name="navigation" finished-at="2024-07-08T10:33:55 CEST" duration-ms="746" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase9()[pri:9, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:33:55 CEST" name="testCase9" finished-at="2024-07-08T10:34:10 CEST" duration-ms="14688" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase9 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:10 CEST" name="deleteCookie" finished-at="2024-07-08T10:34:10 CEST" duration-ms="144" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:10 CEST" name="navigation" finished-at="2024-07-08T10:34:11 CEST" duration-ms="808" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase10()[pri:10, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:11 CEST" name="testCase10" finished-at="2024-07-08T10:34:11 CEST" duration-ms="367" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase10 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:11 CEST" name="deleteCookie" finished-at="2024-07-08T10:34:11 CEST" duration-ms="49" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:11 CEST" name="navigation" finished-at="2024-07-08T10:34:12 CEST" duration-ms="780" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase11()[pri:11, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:12 CEST" name="testCase11" finished-at="2024-07-08T10:34:14 CEST" duration-ms="2176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase11 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:14 CEST" name="deleteCookie" finished-at="2024-07-08T10:34:14 CEST" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:14 CEST" name="navigation" finished-at="2024-07-08T10:34:15 CEST" duration-ms="621" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase13()[pri:13, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:15 CEST" name="testCase13" finished-at="2024-07-08T10:34:17 CEST" duration-ms="2278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase13 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:17 CEST" name="deleteCookie" finished-at="2024-07-08T10:34:17 CEST" duration-ms="99" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:17 CEST" name="navigation" finished-at="2024-07-08T10:34:18 CEST" duration-ms="706" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase14()[pri:14, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:18 CEST" name="testCase14" finished-at="2024-07-08T10:34:23 CEST" duration-ms="5116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase14 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:23 CEST" name="deleteCookie" finished-at="2024-07-08T10:34:23 CEST" duration-ms="54" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:23 CEST" name="navigation" finished-at="2024-07-08T10:34:24 CEST" duration-ms="771" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase15()[pri:15, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:24 CEST" name="testCase15" finished-at="2024-07-08T10:34:26 CEST" duration-ms="2215" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase15 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:26 CEST" name="deleteCookie" finished-at="2024-07-08T10:34:26 CEST" duration-ms="45" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:26 CEST" name="navigation" finished-at="2024-07-08T10:34:27 CEST" duration-ms="734" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase16()[pri:16, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:27 CEST" name="testCase16" finished-at="2024-07-08T10:34:29 CEST" duration-ms="2467" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase16 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:29 CEST" name="deleteCookie" finished-at="2024-07-08T10:34:29 CEST" duration-ms="46" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:29 CEST" name="navigation" finished-at="2024-07-08T10:34:30 CEST" duration-ms="734" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase17()[pri:17, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:30 CEST" name="testCase17" finished-at="2024-07-08T10:34:32 CEST" duration-ms="1928" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase17 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:32 CEST" name="deleteCookie" finished-at="2024-07-08T10:34:32 CEST" duration-ms="50" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:32 CEST" name="navigation" finished-at="2024-07-08T10:34:33 CEST" duration-ms="718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase18()[pri:18, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:33 CEST" name="testCase18" finished-at="2024-07-08T10:34:33 CEST" duration-ms="636" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase18 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:33 CEST" name="deleteCookie" finished-at="2024-07-08T10:34:33 CEST" duration-ms="43" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:33 CEST" name="navigation" finished-at="2024-07-08T10:34:34 CEST" duration-ms="731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase19()[pri:19, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:34 CEST" name="testCase19" finished-at="2024-07-08T10:34:35 CEST" duration-ms="653" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase19 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:35 CEST" name="deleteCookie" finished-at="2024-07-08T10:34:35 CEST" duration-ms="49" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:35 CEST" name="navigation" finished-at="2024-07-08T10:34:35 CEST" duration-ms="763" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase21()[pri:21, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:35 CEST" name="testCase21" finished-at="2024-07-08T10:34:38 CEST" duration-ms="2395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase21 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:38 CEST" name="deleteCookie" finished-at="2024-07-08T10:34:38 CEST" duration-ms="53" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:38 CEST" name="navigation" finished-at="2024-07-08T10:34:39 CEST" duration-ms="688" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase22()[pri:22, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:39 CEST" name="testCase22" finished-at="2024-07-08T10:34:39 CEST" duration-ms="403" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase22 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:39 CEST" name="deleteCookie" finished-at="2024-07-08T10:34:39 CEST" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:39 CEST" name="navigation" finished-at="2024-07-08T10:34:40 CEST" duration-ms="761" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="testCase26()[pri:26, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:40 CEST" name="testCase26" finished-at="2024-07-08T10:34:41 CEST" duration-ms="937" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase26 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:41 CEST" name="deleteCookie" finished-at="2024-07-08T10:34:41 CEST" duration-ms="48" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:projectPCPress.TestPCPressClass@957e06]" started-at="2024-07-08T10:34:41 CEST" name="closeDriver" finished-at="2024-07-08T10:34:41 CEST" duration-ms="247" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-      </class> <!-- projectMyStore.TestScript -->
+      </class> <!-- projectPCPress.TestPCPressClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
