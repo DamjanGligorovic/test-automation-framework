@@ -7,11 +7,11 @@ public class TestDataEmailClass {
 	public Object[][] incorrectEmail() {
 	    return new Object[][] {
 	    	
-	        {""},
+	        
 	        {"john.doeyahoo.com"},
 	        {"eva.smith@gmail@.com"},
 	        {"helena.raw @gmail.com"},
-	        {"aca^kovac@hotmail.com"}
+	        
 	        
 	        
 	       

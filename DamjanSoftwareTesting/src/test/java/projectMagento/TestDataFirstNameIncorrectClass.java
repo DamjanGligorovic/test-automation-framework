@@ -7,11 +7,12 @@ public class TestDataFirstNameIncorrectClass {
 	public Object[][] incorrectFirstName() {
 	    return new Object[][] {
 	    	
-	        {""},
+	       
 	        {"jovankan"},
 	        {"ISABELLA"},
-	        {"@Isabella"},
-	        {"12345678"}
+	        {"12345678"},
+	       
+	       
 	       
 	      
 

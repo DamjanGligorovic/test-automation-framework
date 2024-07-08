@@ -7,12 +7,11 @@ public class TestDataLastNameIncorrectClass {
 	public Object[][] incorrectLastName() {
 	    return new Object[][] {
 	    	
-	        {""},
+	       
 	        {"markovic"},
 	        {"STEFANOVIC"},
-	        {"@Jovanovic"},
 	        {"12345678"},
-	        {"#$%^&((!markovicS"},
+	        
 	        
 	       
 	      

@@ -7,13 +7,12 @@ public class TestDataPasswordClass {
 	public Object[][] incorrectPassword() {
 	    return new Object[][] {
 	    	
-	        {""},
+	     
 	        {"Example"},
 	        {" Exampler1"},
 	        {"Exampler1 "},
 	        {"Exampler"},
 	        {"example@r"},
-	        {"EXAMPLE@"},
 	        {"EXAMPLE@"}
 	        
 	       

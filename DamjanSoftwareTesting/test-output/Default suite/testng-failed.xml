@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="projectPCPress.TestPCPressClass">
+      <class name="projectMagento.TestPageMagentoClass">
         <methods>
-          <include name="testCase2"/>
-          <include name="initialization"/>
-          <include name="deleteCookie"/>
-          <include name="navigation"/>
-          <include name="testCase1"/>
           <include name="closeDriver"/>
+          <include name="testCase3" invocation-numbers="0 1 2"/>
+          <include name="initialization"/>
+          <include name="testCase2" invocation-numbers="0 1 2"/>
+          <include name="navigation"/>
+          <include name="deleteCookie"/>
         </methods>
-      </class> <!-- projectPCPress.TestPCPressClass -->
+      </class> <!-- projectMagento.TestPageMagentoClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
