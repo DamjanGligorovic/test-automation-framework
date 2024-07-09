@@ -11,7 +11,7 @@ public class HomePageTestClass extends BaseIITestSrbijaVozClass {
 	@BeforeMethod
 	public void navigation() {
 		driver.navigate().to("https://webapi1.srbvoz.rs/ekarta/app/#!/home");
-		
+		driver.navigate().refresh();
 	}
 	@AfterMethod
 	public void deleteCookie() {

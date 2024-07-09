@@ -22,7 +22,7 @@ public class MainPage {
 	String parentWindowID;
 	@FindBy (css  = "a[href='#/product/01']")  //a[href='#/product/01']   //body > div > main > section > ul > li:nth-child(1) > a
 	WebElement poloShirtLinkElement;
-	@FindBy(css=  "[title=\"PayPal\"]")
+	@FindBy(xpath =  "//iframe[@id='jsx-iframe-97e3262d1e']")
 	WebElement iframElement;
 	@FindBy (css = "body > div > main > section > ul > li:nth-child(1) > a > p.products__list__list-item__item__title")
 	WebElement titleFirstPagElement;
@@ -72,6 +72,7 @@ public class MainPage {
 
 
 	}
+	
 	public void switchToChildWindow1() {
 		 {
 			//String productName = poloShirtLinkElement.findElement(By.cssSelector("body > div > main > section > ul > li:nth-child(1) > a > p.products__list__list-item__item__title")).getText();

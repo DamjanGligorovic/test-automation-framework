@@ -20,7 +20,7 @@ public class LoginPageSrbijaIIVozClass {
 	WebElement inputField_StanicaOd;
 	@FindBy(id = "stanicado")
 	WebElement inputField_StanicaDo;
-	@FindBy (css = "[title=\"Beograd-Prokop\"]")
+	@FindBy (css = "[title=\"Beograd Centar-Prokop\"]")
 	WebElement optionBeogradProkop;
 	@FindBy (css ="[title=\"Novi Sad\"]")
 	WebElement optionNoviSad;
