@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="projectPCPress.TestPCPressClass">
+      <class name="projectDemoBlaze.TestDemoBlazeClass">
         <methods>
           <include name="testCase2"/>
-          <include name="initialization"/>
           <include name="deleteCookie"/>
+          <include name="initialization"/>
           <include name="navigation"/>
-          <include name="testCase1"/>
           <include name="closeDriver"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- projectPCPress.TestPCPressClass -->
+      </class> <!-- projectDemoBlaze.TestDemoBlazeClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -153,5 +153,10 @@ count--;
 				wait.until(ExpectedConditions.alertIsPresent());
 				driver.switchTo().alert().accept();
 		}
+
+		public void saveScreenshot(byte[] s) {
+			// TODO Auto-generated method stub
+			
+		}
 		 
 }
