@@ -2,16 +2,22 @@ package projectDemoBlaze;
 
 
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNotEquals;
+
+import java.security.PublicKey;
 import java.security.SecureRandom;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAmount;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.security.auth.callback.PasswordCallback;
 import javax.swing.text.PasswordView;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -83,12 +89,58 @@ public class LoginPageDemoBlaze {
     WebElement inputField_ContactMessageElement;
     @FindBy(css ="[onclick=\"send()\"]")
     WebElement buttonSendMessagElement;
+    @FindBy (css =  "div#tbodyid div:nth-child(1)")
+    List<WebElement> subtitleElements;
+    @FindBy(css="[onclick=\"addToCart(1)\"]")
+    WebElement buttonAddToCartElement;
+    @FindBy(css = "#tbodyid a")
+    WebElement binRemoveElement;
+    @FindBy(css = "h3#totalp.panel-title")
+    WebElement element360;
+    @FindBy(xpath = "//a[@id='nava']")
+    WebElement logoElement;
+    
 	public LoginPageDemoBlaze (WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		actions = new Actions(driver);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 	}
+	public boolean verifyTextOfItems() {
+		wait.until(ExpectedConditions.visibilityOfAllElements(subtitleElements));
+		return subtitleElements.get(0).isDisplayed();
+	}
+	public void clickOnTheButtonBin() {
+		wait.until(ExpectedConditions.elementToBeClickable(binRemoveElement)).click();
+	}
+	public void clickOnTheLogo() {
+		wait.until(ExpectedConditions.elementToBeClickable(logoElement)).click();
+	}
+	public void clickButtonAddToCart() {
+		wait.until(ExpectedConditions.elementToBeClickable(buttonAddToCartElement)).click();
+		wait.until(ExpectedConditions.alertIsPresent());
+		driver.switchTo().alert().accept();
+	}
+	public void verifyThePriceAndButtonBin() {
+		wait.until(ExpectedConditions.elementToBeClickable(buttonAddToCartElement)).click();
+		wait.until(ExpectedConditions.alertIsPresent());
+		driver.switchTo().alert().accept();
+		//wait.until(ExpectedConditions.visibilityOfAllElements(allLinks));
+		String productName = driver.findElement(By.cssSelector("h3.price-container")).getText();
+		//Klik na 1. proizvod
+		allLinks.get(3).click();
+		String productName2 = driver.findElement(By.cssSelector("h3#totalp.panel-title")).getText();
+		assertNotEquals(productName, productName2);
+	}
+	public void clickOnTheFirstItem() {
+		wait.until(ExpectedConditions.visibilityOfAllElements(subtitleElements));
+		String productName = subtitleElements.get(0).findElement(By.cssSelector("#tbodyid > div:nth-child(1) > div > div > h4 > a")).getText();
+		//Klik na 1. proizvod
+		subtitleElements.get(0).click();
+		wait.until(ExpectedConditions.textToBe(By.tagName("h2"), productName));	
+	
+	}
+	
 	
 		public void clickLinkByIndex(int index) {
 			 int count = 1;

@@ -82,6 +82,18 @@ public class TestDemoBlazeClass extends BaseTestDemoBlazeClass {
 		String expectedUrlString = "https://www.demoblaze.com/index.html#";
 		assertEquals(actualUrlString, expectedUrlString);
 	}
+	@Test
+	public void testCase5() throws IOException {
+		loginPage.clickOnTheFirstItem();
+		loginPage.verifyThePriceAndButtonBin();
+		loginPage.clickOnTheButtonBin();
+		loginPage.clickOnTheLogo();
+		File f = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		Files.copy(f, new File("C:\\Users\\Damja\\OneDrive\\Desktop\\Sample\\demoBlaze.jpg"));
+		String actualUrlString = driver.getCurrentUrl();
+		String expectedUrlString = "https://www.demoblaze.com/index.html";
+		assertEquals(actualUrlString, expectedUrlString);
+	}
 	
 	
 }

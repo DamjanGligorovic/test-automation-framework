@@ -5,11 +5,10 @@
     <classes>
       <class name="projectDemoBlaze.TestDemoBlazeClass">
         <methods>
-          <include name="testCase2"/>
           <include name="deleteCookie"/>
           <include name="initialization"/>
           <include name="navigation"/>
-          <include name="closeDriver"/>
+          <include name="testCase5"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- projectDemoBlaze.TestDemoBlazeClass -->
