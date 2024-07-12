@@ -16,7 +16,7 @@ public class TestCreateAnAdSasomange extends BaseCreateAnAdSasomange {
 	public void navigation() {
 		driver.navigate().to("https://sasomange.rs/uloguj-se");
 		loginPage.setUpLoginPasswordUsername("damjanserbia123@gmail.com", "Felina10@");
-	    wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	    wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 	}
 	@AfterMethod
@@ -87,8 +87,34 @@ public class TestCreateAnAdSasomange extends BaseCreateAnAdSasomange {
 		loginPage.uploadPhoto4(filePath8);
 		softAssert.assertTrue(loginPage.verifyErrorMessages(), "The error message is not displayed.");
 	}
+	@Test
+	
+	public void testCase4() {
+		SoftAssert softAssert = new SoftAssert();
+		loginPage.clickOnTheButtons();
+		//softAssert.assertTrue(loginPage.getElementsList());
+		//softAssert.assertTrue(loginPage.getElementsList());
+		loginPage.clickOnTheButtonVozila();
+		loginPage.clickOnTheButtonAutomobili();
+		loginPage.clickOnTheButtonPolovniAutomobili();
+		loginPage.clickXClose();
+		loginPage.clickOnTheButtonNastavi();
+		//softAssert.assertTrue(loginPage.getElementsList1());
+		//softAssert.assertFalse(loginPage.getElementsList2());
+		loginPage.clickOnAudiOption();
+		loginPage.clickOnTheModelOption("A3");
+		softAssert.assertTrue(loginPage.verifyModelMenu());
+		
+			softAssert.assertAll();
+
+	    }
+		//softAssert.assertTrue(loginPage.verifyModelMenu());
+		//loginPage.clickOnModelOption();
+		//softAssert.assertTrue(loginPage.verifyModelGorivo());
+		
+		}
 	
 
 
-}
+
 

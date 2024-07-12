@@ -87,12 +87,167 @@ public class LoginPageCreateAnAd {
 	WebElement locationInputMenuElement;
 	@FindBy(css = "#info-about-product > div > button.btn.btn--type-primary.step-next")
 	WebElement buttonNastaviElement2;
+	@FindBy(css = ".ps.dropdown-scroll-content.theme-scrollbar.ps--active-y >ul>li")
+	List<WebElement> listaMarkaAutomobila;
+	@FindBy(css ="#info-about-product > section:nth-child(2) > section.dynamic-configuration > section:nth-child(2) > section > div.section-content-wrapper.two-columns > div:nth-child(5) > section > section > label > input")
+	WebElement predjeniKilometriElement;
+	@FindBy(css = "#rich-text-editor > div.ql-editor.ql-blank")
+	WebElement tekstOglasaElement1;
+	@FindBy(css = "#info-about-product > section:nth-child(2) > section:nth-child(4) > div.section-content-wrapper > section.price-section > section:nth-child(1) > label > input")
+	WebElement inputField_CenaElement;
+	@FindBy(css = "#info-about-product > div > button.btn.btn--type-primary.step-next")
+	WebElement buttonNastaviElement3;
+	@FindBy(css = "#searchLocations")
+	WebElement lokacijaFieldElement;
+	@FindBy(css= "#page-wrap > astro-island:nth-child(5) > section > div.add-product-wrapper.js-scroll-element > section.product-seller-info > form > div > button.btn.btn--type-primary.step-next")
+	WebElement sacuvajButtonElement;
+	@FindBy(css="#info-about-product > section:nth-child(2) > section.dynamic-configuration > section:nth-child(1) > section > div.section-content-wrapper.two-columns > div.narrow.half-column > section > section > div > ul > li:nth-child(1) > label > span.checkbox-sign.round-checkbox-sign")
+	WebElement audiElement;
+	@FindBy(css="#info-about-product > div > button.btn.button--type-bordered-tertiary.step-back")
+	WebElement buttonNazadElement;
+	@FindBy(xpath  ="//body[1]/div[1]/main[1]/astro-island[2]/section[1]/div[3]/section[1]/form[1]/section[2]/section[3]/section[1]/section[1]/div[2]/div[2]/section[1]/section[1]/div[1]/ul[1]/li[7]/label[1]/span[1]")
+	WebElement a3OptionElement;
+	@FindBy(css ="div[data-attribute-type='dropDownSingleSelectOrFreeText'] section[class='single-dropdown'] div p[class='selected-options']")
+	WebElement menuModElement;
+	@FindBy(css="#info-about-product > section:nth-child(2) > section.dynamic-configuration > section:nth-child(1) > section > div.section-content-wrapper.two-columns > div:nth-child(3) > section")
+	WebElement gorivoMenuElement;
+	@FindBy(css  =".step-btns-wrapper.js-step-btns-element")
+	WebElement invisibleElementModelMenuElement;
+	@FindBy(css="btn btn--type-primary step-next")
+	WebElement buttonNastaviElement5;
+	@FindBy(css="#info-about-product > section:nth-child(2) > section.dynamic-configuration > section:nth-child(1) > section > div.section-content-wrapper.two-columns > div:nth-child(2) > section > label > input[type=text]")
+	WebElement inputElementModelSearchElement;
 	public LoginPageCreateAnAd (WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		actions = new Actions(driver);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		this.js = (JavascriptExecutor) driver;
+	}
+	public void clickOnTheButtonNastavi1() {
+		wait.until(ExpectedConditions.elementToBeClickable(buttonNastaviElement3)).click();
+	}
+	//public void typeSearchModel(String input) {
+		//wait.until(ExpectedConditions.elementToBeClickable(inputElementModelSearchElement));
+		//inputElementModelSearchElement.clear();
+		//inputElementModelSearchElement.sendKeys(input);
+	//}
+	public void clickOnTheSacuvaj1() {
+		wait.until(ExpectedConditions.elementToBeClickable(sacuvajButtonElement)).click();
+	}
+	public void typeLocation(String input) {
+		wait.until(ExpectedConditions.visibilityOf(lokacijaFieldElement));
+		lokacijaFieldElement.sendKeys(input);
+	}
+	
+	public void typePredjeniKilometri(String input) {
+		wait.until(ExpectedConditions.visibilityOf(predjeniKilometriElement));
+		predjeniKilometriElement.sendKeys(input);
+	}
+	public void typeCena1(String input) {
+		wait.until(ExpectedConditions.visibilityOf(inputField_CenaElement));
+		inputField_CenaElement.sendKeys(input);
+	}
+	public void typeTekstoglasa(String input) {
+		wait.until(ExpectedConditions.visibilityOf(tekstOglasaElement1));
+		tekstOglasaElement1.sendKeys(input);
+	}
+	public void clickOnAudiOption() {
+		wait.until(ExpectedConditions.invisibilityOf(buttonField_SubmitElement));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".single-dropdown"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(audiElement));
+		audiElement.click();
+
+		//return menuModElement.isEnabled();
+
+	}
+
+		public void clickOnTheModelOption(String input) {
+	       
+		
+		wait.until(ExpectedConditions.visibilityOf(menuModElement)).click();
+		//wait.until(ExpectedConditions.invisibilityOf(invisibleElementModelMenuElement));
+		wait.until(ExpectedConditions.elementToBeClickable(inputElementModelSearchElement));
+
+		inputElementModelSearchElement.clear();
+		inputElementModelSearchElement.sendKeys(input);
+		wait.until(ExpectedConditions.elementToBeClickable(a3OptionElement));
+		a3OptionElement.click();
+		//return gorivoMenuElement.isEnabled();
+////section[@class='single-dropdown open']//section[@class='dropdown-content with-search']
+//#info-about-product > section:nth-child(2) > section.dynamic-configuration > section:nth-child(1) > section > div.section-content-wrapper.two-columns > div:nth-child(2) > section > div > p
+		}	
+	
+	public boolean verifyModelMenu() {
+	
+		return menuModElement.isEnabled();
+	}
+	public boolean verifyModelGorivo() {
+		
+		return gorivoMenuElement.isSelected();
+	}
+	public void clickOnRegistrovanDoOption() {
+		  for (WebElement automobil : listaMarkaAutomobila) {
+	            if (automobil.getText().equals("02/2025")) {
+	            	automobil.click();
+	                break;
+	            }
+	        }
+		
+	}
+	public void clickOnModelOption() {
+		  for (WebElement automobil : listaMarkaAutomobila) {
+	            if (automobil.getText().equals("A3")) {
+	            	automobil.click();
+	                break;
+	            }
+	        }
+		
+	}
+	public void clickOnGorivoOption() {
+		  for (WebElement automobil : listaMarkaAutomobila) {
+	            if (automobil.getText().equals("Dizel")) {
+	            	automobil.click();
+	                break;
+	            }
+	        }
+		
+	}
+	public void clickOnOblikKaroserijeOption() {
+		  for (WebElement automobil : listaMarkaAutomobila) {
+	            if (automobil.getText().equals("Limuzina")) {
+	            	automobil.click();
+	                break;
+	            }
+	        }
+		
+	}
+	public void clickOnBrojVrataOption() {
+		  for (WebElement automobil : listaMarkaAutomobila) {
+	            if (automobil.getText().equals("4/5")) {
+	            	automobil.click();
+	                break;
+	            }
+	        }
+		
+	}
+	public void clickOnGodinaProizvodnjeOption() {
+		  for (WebElement automobil : listaMarkaAutomobila) {
+	            if (automobil.getText().equals("2022")) {
+	            	automobil.click();
+	                break;
+	            }
+	        }
+		
+	}
+	public void clickOnTipOption() {
+		  for (WebElement automobil : listaMarkaAutomobila) {
+	            if (automobil.getText().equals("2.0 30 TDI S TRONIC S LINE, 85kW/116KS, Automatski/Poluautomatski, (2022 - 2023)")) {
+	            	automobil.click();
+	                break;
+	            }
+	        }
+		
 	}
 	public void clickXButton() {
 		wait.until(ExpectedConditions.elementToBeClickable(xButtonerrorMessagElement)).click();
@@ -298,6 +453,10 @@ public class LoginPageCreateAnAd {
 	}
        public void clickNastavi2() {
     	   wait.until(ExpectedConditions.visibilityOf(buttonNastaviElement2)).click();
+
+	}
+       public void clickNastavi5() {
+    	   wait.until(ExpectedConditions.visibilityOf(buttonNastaviElement5)).click();
 
 	}
        }
