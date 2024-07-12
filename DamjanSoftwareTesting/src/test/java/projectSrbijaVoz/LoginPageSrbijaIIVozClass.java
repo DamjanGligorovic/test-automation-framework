@@ -1,4 +1,4 @@
-package projectHomepageSrbijaVoz;
+package projectSrbijaVoz;
 
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class LoginPageSrbijaIIVozClass {
 	WebDriver driver;
 	WebDriverWait wait;
-	
+	//Test
 	@FindBy (id = "jedanSmer")
 	WebElement buttonJedanSmer;
 	@FindBy (id = "povratna")
