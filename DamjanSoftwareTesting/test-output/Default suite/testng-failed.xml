@@ -3,40 +3,23 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="projectSauceDemo.TestSauceDemoClass">
+      <class name="projectDemoBlaze.TestDemoBlazeClass">
         <methods>
-          <include name="testCase22"/>
-          <include name="testCase44"/>
-          <include name="testCase27"/>
-          <include name="testCase4"/>
-          <include name="testCase26"/>
-          <include name="testCase43"/>
-          <include name="navigation"/>
-          <include name="closeDriver"/>
-          <include name="testCase29"/>
-          <include name="initialization"/>
-          <include name="setUp"/>
-          <include name="testCase12"/>
-          <include name="testCase34"/>
-          <include name="testCase11"/>
-          <include name="testCase33"/>
-          <include name="testCase14"/>
-          <include name="testCase36"/>
+          <include name="testCase9"/>
           <include name="testCase13"/>
-          <include name="testCase35"/>
-          <include name="testCase16"/>
-          <include name="testCase38"/>
-          <include name="testCase15"/>
-          <include name="testCase37"/>
-          <include name="testCase17"/>
-          <include name="testCase39"/>
-          <include name="testCase32"/>
+          <include name="testCase10"/>
+          <include name="testCase11"/>
+          <include name="testCase8"/>
+          <include name="testCase7"/>
           <include name="deleteCookie"/>
-          <include name="testCase18"/>
-          <include name="testCaseDodatakImageProblemUser3"/>
-          <include name="testCase41"/>
+          <include name="initialization"/>
+          <include name="navigation"/>
+          <include name="testCase12"/>
+          <include name="closeDriver"/>
+          <include name="testCase5"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- projectSauceDemo.TestSauceDemoClass -->
+      </class> <!-- projectDemoBlaze.TestDemoBlazeClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
