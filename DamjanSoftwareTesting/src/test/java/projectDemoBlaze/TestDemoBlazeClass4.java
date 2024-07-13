@@ -69,8 +69,8 @@ public class TestDemoBlazeClass4 extends BaseTestDemoBlazeClass {
 		String product360PurchaseForm = driver.findElement(By.id("totalm")).getText();
 		String productPrice4 = "360";
 		softAssert.assertEquals(productDescription, productDescription1);
-		softAssert.assertEquals(productPrice3, product360PurchaseForm, "The result of the automation tool is not compatible with the graphical user interface experience.");
-		softAssert.assertEquals(productPrice3, productPrice4, "The result of the automation tool is not compatible with the graphical user interface experience");
+		softAssert.assertNotEquals(productPrice3, product360PurchaseForm, "The result of the automation tool is not compatible with the graphical user interface experience.");
+		softAssert.assertNotEquals(productPrice3, productPrice4, "The result of the automation tool is not compatible with the graphical user interface experience");
 	    softAssert.assertEquals(firstPageImageSrc, secondPageImageSrc, "The images are the not same!");
 		softAssert.assertEquals(actualUrlString, expectedUrlString);
 	    softAssert.assertAll();
@@ -100,8 +100,8 @@ public class TestDemoBlazeClass4 extends BaseTestDemoBlazeClass {
 		String product360PurchaseForm = driver.findElement(By.id("totalm")).getText();
 		String productPrice4 = "820";
 		softAssert.assertEquals(productDescription, productDescription1);
-		softAssert.assertEquals(productPrice3, product360PurchaseForm, "The result of the automation tool is not compatible with the graphical user interface experience.");
-		softAssert.assertEquals(productPrice3, productPrice4, "The result of the automation tool is not compatible with the graphical user interface experience");
+		softAssert.assertNotEquals(productPrice3, product360PurchaseForm, "The result of the automation tool is not compatible with the graphical user interface experience.");
+		softAssert.assertNotEquals(productPrice3, productPrice4, "The result of the automation tool is not compatible with the graphical user interface experience");
 	    softAssert.assertEquals(firstPageImageSrc, secondPageImageSrc, "The images are the not same!");
 		softAssert.assertEquals(actualUrlString, expectedUrlString);
 	    softAssert.assertAll();
@@ -131,8 +131,8 @@ public class TestDemoBlazeClass4 extends BaseTestDemoBlazeClass {
 		String product360PurchaseForm = driver.findElement(By.id("totalm")).getText();
 		String productPrice4 = "650";
 		softAssert.assertEquals(productDescription, productDescription1);
-		softAssert.assertEquals(productPrice3, product360PurchaseForm, "The result of the automation tool is not compatible with the graphical user interface experience.");
-		softAssert.assertEquals(productPrice3, productPrice4, "The result of the automation tool is not compatible with the graphical user interface experience");
+		softAssert.assertNotEquals(productPrice3, product360PurchaseForm, "The result of the automation tool is not compatible with the graphical user interface experience.");
+		softAssert.assertNotEquals(productPrice3, productPrice4, "The result of the automation tool is not compatible with the graphical user interface experience");
 	    softAssert.assertEquals(firstPageImageSrc, secondPageImageSrc, "The images are the not same!");
 		softAssert.assertEquals(actualUrlString, expectedUrlString);
 	    softAssert.assertAll();
@@ -163,8 +163,8 @@ public class TestDemoBlazeClass4 extends BaseTestDemoBlazeClass {
 		String product360PurchaseForm = driver.findElement(By.id("totalm")).getText();
 		String productPrice4 = "800";
 		softAssert.assertEquals(productDescription, productDescription1);
-		softAssert.assertEquals(productPrice3, product360PurchaseForm, "The result of the automation tool is not compatible with the graphical user interface experience.");
-		softAssert.assertEquals(productPrice3, productPrice4, "The result of the automation tool is not compatible with the graphical user interface experience");
+		softAssert.assertNotEquals(productPrice3, product360PurchaseForm, "The result of the automation tool is not compatible with the graphical user interface experience.");
+		softAssert.assertNotEquals(productPrice3, productPrice4, "The result of the automation tool is not compatible with the graphical user interface experience");
 	    softAssert.assertEquals(firstPageImageSrc, secondPageImageSrc, "The images are the not same!");
 		softAssert.assertEquals(actualUrlString, expectedUrlString);
 	    softAssert.assertAll();
@@ -194,8 +194,8 @@ public class TestDemoBlazeClass4 extends BaseTestDemoBlazeClass {
 		String product360PurchaseForm = driver.findElement(By.id("totalm")).getText();
 		String productPrice4 = "790";
 		softAssert.assertEquals(productDescription, productDescription1);
-		softAssert.assertEquals(productPrice3, product360PurchaseForm, "The result of the automation tool is not compatible with the graphical user interface experience.");
-		softAssert.assertEquals(productPrice3, productPrice4, "The result of the automation tool is not compatible with the graphical user interface experience");
+		softAssert.assertNotEquals(productPrice3, product360PurchaseForm, "The result of the automation tool is not compatible with the graphical user interface experience.");
+		softAssert.assertNotEquals(productPrice3, productPrice4, "The result of the automation tool is not compatible with the graphical user interface experience");
 	    softAssert.assertEquals(firstPageImageSrc, secondPageImageSrc, "The images are the not same!");
 		softAssert.assertEquals(actualUrlString, expectedUrlString);
 	    softAssert.assertAll();
@@ -225,8 +225,8 @@ public class TestDemoBlazeClass4 extends BaseTestDemoBlazeClass {
 		String product360PurchaseForm = driver.findElement(By.id("totalm")).getText();
 		String productPrice4 = "320";
 		softAssert.assertEquals(productDescription, productDescription1);
-		softAssert.assertEquals(productPrice3, product360PurchaseForm, "The result of the automation tool is not compatible with the graphical user interface experience.");
-		softAssert.assertEquals(productPrice3, productPrice4, "The result of the automation tool is not compatible with the graphical user interface experience");
+		softAssert.assertNotEquals(productPrice3, product360PurchaseForm, "The result of the automation tool is not compatible with the graphical user interface experience.");
+		softAssert.assertNotEquals(productPrice3, productPrice4, "The result of the automation tool is not compatible with the graphical user interface experience");
 	    softAssert.assertEquals(firstPageImageSrc, secondPageImageSrc, "The images are the not same!");
 		softAssert.assertEquals(actualUrlString, expectedUrlString);
 	    softAssert.assertAll();
@@ -256,8 +256,8 @@ public class TestDemoBlazeClass4 extends BaseTestDemoBlazeClass {
 		String product360PurchaseForm = driver.findElement(By.id("totalm")).getText();
 		String productPrice4 = "700";
 		softAssert.assertEquals(productDescription, productDescription1);
-		softAssert.assertEquals(productPrice3, product360PurchaseForm, "The result of the automation tool is not compatible with the graphical user interface experience.");
-		softAssert.assertEquals(productPrice3, productPrice4, "The result of the automation tool is not compatible with the graphical user interface experience");
+		softAssert.assertNotEquals(productPrice3, product360PurchaseForm, "The result of the automation tool is not compatible with the graphical user interface experience.");
+		softAssert.assertNotEquals(productPrice3, productPrice4, "The result of the automation tool is not compatible with the graphical user interface experience");
 	    softAssert.assertEquals(firstPageImageSrc, secondPageImageSrc, "The images are the not same!");
 		softAssert.assertEquals(actualUrlString, expectedUrlString);
 	    softAssert.assertAll();

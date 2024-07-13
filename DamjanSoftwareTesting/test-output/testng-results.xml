@@ -1,37 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-13T10:46:30 CEST" name="Default suite" finished-at="2024-07-13T10:46:37 CEST" duration-ms="6216">
+  <suite started-at="2024-07-13T19:29:56 CEST" name="Default suite" finished-at="2024-07-13T19:30:15 CEST" duration-ms="18542">
     <groups>
     </groups>
-    <test started-at="2024-07-13T10:46:30 CEST" name="Default test" finished-at="2024-07-13T10:46:37 CEST" duration-ms="6216">
-      <class name="projectDemoBlaze.TestDemoBlazeClass6">
-        <test-method is-config="true" signature="initialization()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass6@43dac38f]" started-at="2024-07-13T10:46:30 CEST" name="initialization" finished-at="2024-07-13T10:46:32 CEST" duration-ms="1678" status="PASS">
+    <test started-at="2024-07-13T19:29:56 CEST" name="Default test" finished-at="2024-07-13T19:30:15 CEST" duration-ms="18542">
+      <class name="projectDemoBlaze.TestDemoBlazeClass8">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:29:56 CEST" name="initialization" finished-at="2024-07-13T19:29:59 CEST" duration-ms="2551" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass6@43dac38f]" started-at="2024-07-13T10:46:32 CEST" name="setUp" finished-at="2024-07-13T10:46:32 CEST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:29:59 CEST" name="setUp" finished-at="2024-07-13T19:29:59 CEST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="navigation()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass6@43dac38f]" started-at="2024-07-13T10:46:32 CEST" name="navigation" finished-at="2024-07-13T10:46:33 CEST" duration-ms="617" status="PASS">
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:29:59 CEST" name="navigation" finished-at="2024-07-13T19:30:00 CEST" duration-ms="838" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigation -->
-        <test-method signature="testCase17()[pri:102, instance:projectDemoBlaze.TestDemoBlazeClass6@43dac38f]" started-at="2024-07-13T10:46:33 CEST" name="testCase17" finished-at="2024-07-13T10:46:36 CEST" duration-ms="3677" status="PASS">
+        <test-method signature="verifyDescription()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:00 CEST" name="verifyDescription" finished-at="2024-07-13T19:30:02 CEST" duration-ms="2400" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCase17 -->
-        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass6@43dac38f]" started-at="2024-07-13T10:46:37 CEST" name="deleteCookie" finished-at="2024-07-13T10:46:37 CEST" duration-ms="14" status="PASS">
+        </test-method> <!-- verifyDescription -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:02 CEST" name="deleteCookie" finished-at="2024-07-13T19:30:02 CEST" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteCookie -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass6@43dac38f]" started-at="2024-07-13T10:46:37 CEST" name="closeDriver" finished-at="2024-07-13T10:46:37 CEST" duration-ms="196" status="PASS">
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:02 CEST" name="navigation" finished-at="2024-07-13T19:30:02 CEST" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="verifyDescriptions2()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:02 CEST" name="verifyDescriptions2" finished-at="2024-07-13T19:30:04 CEST" duration-ms="1602" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDescriptions2 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:04 CEST" name="deleteCookie" finished-at="2024-07-13T19:30:04 CEST" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:04 CEST" name="navigation" finished-at="2024-07-13T19:30:04 CEST" duration-ms="108" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="verifyNames()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:04 CEST" name="verifyNames" finished-at="2024-07-13T19:30:05 CEST" duration-ms="910" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNames -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:05 CEST" name="deleteCookie" finished-at="2024-07-13T19:30:05 CEST" duration-ms="27" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:05 CEST" name="navigation" finished-at="2024-07-13T19:30:05 CEST" duration-ms="141" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="verifyNames2()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:05 CEST" name="verifyNames2" finished-at="2024-07-13T19:30:06 CEST" duration-ms="943" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNames2 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:06 CEST" name="deleteCookie" finished-at="2024-07-13T19:30:06 CEST" duration-ms="25" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:06 CEST" name="navigation" finished-at="2024-07-13T19:30:06 CEST" duration-ms="91" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="verifyPrices1()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:06 CEST" name="verifyPrices1" finished-at="2024-07-13T19:30:07 CEST" duration-ms="908" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPrices1 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:07 CEST" name="deleteCookie" finished-at="2024-07-13T19:30:07 CEST" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:07 CEST" name="navigation" finished-at="2024-07-13T19:30:07 CEST" duration-ms="90" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="verifyPrices2()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:07 CEST" name="verifyPrices2" finished-at="2024-07-13T19:30:08 CEST" duration-ms="885" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPrices2 -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:08 CEST" name="deleteCookie" finished-at="2024-07-13T19:30:08 CEST" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:08 CEST" name="navigation" finished-at="2024-07-13T19:30:08 CEST" duration-ms="68" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="verifyPricesFromSecondToThirdPage()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:08 CEST" name="verifyPricesFromSecondToThirdPage" finished-at="2024-07-13T19:30:11 CEST" duration-ms="2956" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPricesFromSecondToThirdPage -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:11 CEST" name="deleteCookie" finished-at="2024-07-13T19:30:11 CEST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="navigation()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:11 CEST" name="navigation" finished-at="2024-07-13T19:30:11 CEST" duration-ms="402" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="verifyPricesOnTheThirdPage()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:11 CEST" name="verifyPricesOnTheThirdPage" finished-at="2024-07-13T19:30:14 CEST" duration-ms="3009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPricesOnTheThirdPage -->
+        <test-method is-config="true" signature="deleteCookie()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:14 CEST" name="deleteCookie" finished-at="2024-07-13T19:30:15 CEST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookie -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:projectDemoBlaze.TestDemoBlazeClass8@5b03b9fe]" started-at="2024-07-13T19:30:15 CEST" name="closeDriver" finished-at="2024-07-13T19:30:15 CEST" duration-ms="307" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-      </class> <!-- projectDemoBlaze.TestDemoBlazeClass6 -->
+      </class> <!-- projectDemoBlaze.TestDemoBlazeClass8 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

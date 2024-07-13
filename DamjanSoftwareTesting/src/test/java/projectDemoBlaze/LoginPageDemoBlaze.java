@@ -23,6 +23,7 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.service.DriverFinder;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -280,14 +281,308 @@ public class LoginPageDemoBlaze {
     WebElement firstItemElement2;
     @FindBy(css="#tbodyid > div.row > div > a")
     WebElement sony7addToCartElement;
-    @FindBy(css= "#tbodyid.row div:nth-child(1)")
+    @FindBy(css= "#tbodyid.row > div")
     List<WebElement> listOfSonysElements;
+    @FindBy(css=".row h5")
+    List<WebElement> listOfPricesElements;
+    @FindBy(xpath  = "//*[@id=\"tbodyid\"]/div[1]/div/div/h4/a") ///#tbodyid > div:nth-child(1) > div > div > h4 > a
+    WebElement productName;
+    @FindBy(css="#tbodyid > div:nth-child(1) > div > a > img")
+    WebElement productItemLaptopElement;
+    @FindBy(xpath  ="//*[@id=\"tbodyid\"]/div[1]/div/div/h5")
+    WebElement productPrice;
+    @FindBy(css= "div#tbodyid.row > div")
+    List<WebElement> listOfTwoMonitorsElements;
+    @FindBy(css="[onclick=\"addToCart(10)\"]")
+    WebElement buttonAddToCart10;
+    @FindBy(css="[onclick=\"addToCart(14)\"]")
+    WebElement buttonAddToCart14;
+    @FindBy(css="[onclick=\"addToCart(8)\"]")
+    WebElement buttonAddToCart8;
+    @FindBy(css="[onclick=\"addToCart(9)\"]")
+    WebElement buttonAddToCart9;
+    @FindBy(css="[onclick=\"addToCart(11)\"]")
+    WebElement buttonAddToCart11;
+    @FindBy(css="[onclick=\"addToCart(12)\"]")
+    WebElement buttonAddToCart12;
+    @FindBy(css="[onclick=\"addToCart(13)\"]")
+    WebElement buttonAddToCart13;
+    @FindBy(css="[onclick=\"addToCart(15)\"]")
+    WebElement buttonAddToCart144;
     public LoginPageDemoBlaze (WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		actions = new Actions(driver);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
+	}
+    //// N E W      W A Y---------------------------------------------------------------------------
+    public void verifyMonitors() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 2));
+		String actualName = listOfTwoMonitorsElements.get(0).findElement(By.cssSelector(".card-block [href=\"prod.html?idp_=10\"]")).getText();
+	    listOfTwoMonitorsElements.get(0).click();
+	    String expectedName = "Apple monitor 24";
+	    assertEquals(actualName, expectedName);
+    }
+    public void verifyMonitors1() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 2));
+		String actualName = listOfTwoMonitorsElements.get(0).findElement(By.cssSelector(".card-block > h5")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+	    listOfTwoMonitorsElements.get(0).click();
+	    String expectedName = "$400";
+	    assertEquals(actualName, expectedName);
+    }
+    public void verifyMonitors2() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 2));
+		String actualName = listOfTwoMonitorsElements.get(0).findElement(By.cssSelector("div.card-block p")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+	    listOfTwoMonitorsElements.get(0).click();
+	    String expectedName = driver.findElement(By.cssSelector("#more-information > p")).getText();
+	    assertEquals(actualName, expectedName);
+    }
+    public void verifyMonitors3() {
+		buttonAddToCart10.click();
+    }
+    public void verifyMonitor5() {
+		buttonAddToCart14.click();
+    }
+    public void verifyMonitor8() {
+		buttonAddToCart8.click();
+    }
+    public void verifyMonitor9() {
+		buttonAddToCart9.click();
+    }
+    public void verifyMonitor11() {
+		buttonAddToCart11.click();
+    }
+    public void verifyMonitor12() {
+		buttonAddToCart12.click();
+    }
+    public void verifyMonitor13() {
+		buttonAddToCart13.click();
+    }
+    public void verifyMonitor14() {
+    	buttonAddToCart144.click();
+    }
+   ///Drugi monitor ----------------------------------------------------------------------------------------------------
+    public void verifyMonitors4() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 2));
+		String actualName = listOfTwoMonitorsElements.get(1).findElement(By.cssSelector(".card-block [href=\"prod.html?idp_=14")).getText();
+	    listOfTwoMonitorsElements.get(1).click();
+	    String expectedName = "ASUS Full HD";
+	    assertEquals(actualName, expectedName);
+    }
+    public void verifyMonitors5() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 2));
+		String actualName = listOfTwoMonitorsElements.get(1).findElement(By.cssSelector(".card-block > h5")).getText();
+	    listOfTwoMonitorsElements.get(1).click();
+	    String expectedName = "$230";
+	    assertEquals(actualName, expectedName);
+    }
+    public void verifyMonitors6() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 2));
+		String actualName = listOfTwoMonitorsElements.get(1).findElement(By.cssSelector("div.card-block p")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+	    listOfTwoMonitorsElements.get(1).click();
+	    String expectedName = driver.findElement(By.cssSelector("#more-information > p")).getText();
+	    assertEquals(actualName, expectedName);
+    }
+    
+    //		String actualName = listOfTwoMonitorsElements.get(0).findElement(By.cssSelector("#tbodyid > h3")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+   // String expectedName = driver.findElement(By.cssSelector("#more-information > p")).getText();
+   // assertEquals(actualName, expectedName);
+    
+    
+    
+    public void clickFirstMonitor() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 2));
+	    listOfTwoMonitorsElements.get(0).click();
+    }
+    public void clickSecondMonitor() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 2));
+	    listOfTwoMonitorsElements.get(1).click();
+    }
+    
+    public void clickFirstLaptop() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+	    listOfTwoMonitorsElements.get(0).click();
+    }
+    public void clickSecondLaptop() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+	    listOfTwoMonitorsElements.get(1).click();
+    }
+    public void clickThirdLaptop() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+	    listOfTwoMonitorsElements.get(2).click();
+    }
+    public void clickFourthLaptop() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+	    listOfTwoMonitorsElements.get(3).click();
+    }
+    public void clickFifthLaptop() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+	    listOfTwoMonitorsElements.get(4).click();
+    }
+    public void clickSixthLaptop() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+	    listOfTwoMonitorsElements.get(5).click();
+    }
+   
+    
+    
+    
+    
+    public void verifyLaptops1() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+		String actualName = listOfTwoMonitorsElements.get(0).findElement(By.cssSelector(".card-block [href=\"prod.html?idp_=8\"]")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+	    listOfTwoMonitorsElements.get(0).click();
+	    String expectedName = "Sony vaio i5";
+	    assertEquals(actualName, expectedName);
+    }
+    public void verifyLaptopsSecond() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+		String actualName = listOfTwoMonitorsElements.get(1).findElement(By.cssSelector(".card-block [href=\"prod.html?idp_=9\"]")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+	    listOfTwoMonitorsElements.get(1).click();
+	    String expectedName = "Sony vaio i7";
+	    assertEquals(actualName, expectedName);
+    }
+    public void verifyLaptopsThird() {
+  		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+  		String actualName = listOfTwoMonitorsElements.get(2).findElement(By.cssSelector(".card-block [href=\"prod.html?idp_=11\"]")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+  	    listOfTwoMonitorsElements.get(2).click();
+  	    String expectedName = "MacBook air";
+  	    assertEquals(actualName, expectedName);
+      }
+    public void verifyLaptopsFourth() {
+  		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+  		String actualName = listOfTwoMonitorsElements.get(3).findElement(By.cssSelector(".card-block [href=\"prod.html?idp_=12\"]")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+  	    listOfTwoMonitorsElements.get(3).click();
+  	    String expectedName = "Dell i7 8gb";
+  	    assertEquals(actualName, expectedName);
+      }
+    public void verifyLaptopsFifth() {
+  		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+  		String actualName = listOfTwoMonitorsElements.get(4).findElement(By.cssSelector(".card-block [href=\"prod.html?idp_=13\"]")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+  	    listOfTwoMonitorsElements.get(4).click();
+  	    String expectedName = "2017 Dell 15.6 Inch";
+  	    assertEquals(actualName, expectedName);
+      }
+    public void verifyLaptopsSixth() {
+  		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+  		String actualName = listOfTwoMonitorsElements.get(5).findElement(By.cssSelector(".card-block [href=\"prod.html?idp_=15\"]")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+  	    listOfTwoMonitorsElements.get(5).click();
+  	    String expectedName = "MacBook Pro";
+  	    assertEquals(actualName, expectedName);
+      }
+    public void verifyLaptops2() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+		String actualName = listOfTwoMonitorsElements.get(0).findElement(By.cssSelector(".card-block > h5")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+	    listOfTwoMonitorsElements.get(0).click();
+	    String expectedName = "$790";
+	    assertEquals(actualName, expectedName);
+    }
+    public void verifyPricesLaptopsSecond() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+		String actualName = listOfTwoMonitorsElements.get(1).findElement(By.cssSelector(".card-block > h5")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+	    listOfTwoMonitorsElements.get(1).click();
+	    String expectedName = "$790";
+	    assertEquals(actualName, expectedName);
+    }
+    public void verifyPricesLaptopsFifth() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+		String actualName = listOfTwoMonitorsElements.get(4).findElement(By.cssSelector(".card-block > h5")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+	    listOfTwoMonitorsElements.get(4).click();
+	    String expectedName = "$700";
+	    assertEquals(actualName, expectedName);
+    }
+    public void verifyPricesLaptopsSixth() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+		String actualName = listOfTwoMonitorsElements.get(5).findElement(By.cssSelector(".card-block > h5")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+	    listOfTwoMonitorsElements.get(5).click();
+	    String expectedName = "$1100";
+	    assertEquals(actualName, expectedName);
+    }
+    public void verifyPricesLaptopsFourth() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+		String actualName = listOfTwoMonitorsElements.get(3).findElement(By.cssSelector(".card-block > h5")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+	    listOfTwoMonitorsElements.get(3).click();
+	    String expectedName = "$700";
+	    assertEquals(actualName, expectedName);
+    }
+    public void verifyPricesLaptopsThird() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+		String actualName = listOfTwoMonitorsElements.get(2).findElement(By.cssSelector(".card-block > h5")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+	    listOfTwoMonitorsElements.get(2).click();
+	    String expectedName = "$700";
+	    assertEquals(actualName, expectedName);
+    }
+    public void verifyLaptops3() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+		String actualName = listOfTwoMonitorsElements.get(0).findElement(By.cssSelector("div.card-block p")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+	    listOfTwoMonitorsElements.get(0).click();
+	    String expectedName = driver.findElement(By.cssSelector("#more-information > p")).getText();
+	    assertEquals(actualName, expectedName);
+    }
+    public void verifyLaptopsSecondDescription() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+		String actualName = listOfTwoMonitorsElements.get(1).findElement(By.cssSelector("div.card-block p")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+	    listOfTwoMonitorsElements.get(1).click();
+	    String expectedName = driver.findElement(By.cssSelector("#more-information > p")).getText();
+	    assertEquals(actualName, expectedName);
+    }
+    public void verifyLaptopsThirdDescription() {
+  		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+  		String actualName = listOfTwoMonitorsElements.get(2).findElement(By.cssSelector("div.card-block p")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+  	    listOfTwoMonitorsElements.get(2).click();
+  	    String expectedName = driver.findElement(By.cssSelector("#more-information > p")).getText();
+  	    assertEquals(actualName, expectedName);
+      }
+    public void verifyLaptopsFourthDescription() {
+  		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+  		String actualName = listOfTwoMonitorsElements.get(3).findElement(By.cssSelector("div.card-block p")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+  	    listOfTwoMonitorsElements.get(3).click();
+  	    String expectedName = driver.findElement(By.cssSelector("#more-information > p")).getText();
+  	    assertEquals(actualName, expectedName);
+      }
+    public void verifyLaptopsFifthDescription() {
+  		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+  		String actualName = listOfTwoMonitorsElements.get(4).findElement(By.cssSelector("div.card-block p")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+  	    listOfTwoMonitorsElements.get(4).click();
+  	    String expectedName = driver.findElement(By.cssSelector("#more-information > p")).getText();
+  	    assertEquals(actualName, expectedName);
+      }
+    public void verifyLaptopsSixthDescription() {
+  		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div#tbodyid.row > div"), 6));
+  		String actualName = listOfTwoMonitorsElements.get(5).findElement(By.cssSelector("div.card-block p")).getText(); ////h5[normalize-space()='$400']   //.card-block > h5
+  	    listOfTwoMonitorsElements.get(5).click();
+  	    String expectedName = driver.findElement(By.cssSelector("#more-information > p")).getText();
+  	    assertEquals(actualName, expectedName);
+      }
+    public String getProductName() {
+        return wait.until(ExpectedConditions.visibilityOf(productName)).getText();
+    }
+    public void clickTheProductName() {
+         wait.until(ExpectedConditions.elementToBeClickable(productItemLaptopElement)).click();
+    }
+
+    public String getProductPrice() {
+        return wait.until(ExpectedConditions.visibilityOf(productPrice)).getText();
+    }
+    public void listOfLaptops() {
+		wait.until(ExpectedConditions.visibilityOfAllElements(listOfSonysElements));
+		listOfSonysElements.get(0).click();
+
+	}
+    public void verifyPrices() {
+		wait.until(ExpectedConditions.visibilityOfAllElements(listOfSonysElements));
+		String sonyVaioI5 = listOfSonysElements.get(0).findElement(By.cssSelector("#tbodyid > div:nth-child(1) > div > div > h5")).getText();
+		listOfSonysElements.get(0).click();
+		String sonyVaioI5SecondString = "$790";
+		assertEquals(sonyVaioI5, sonyVaioI5SecondString, "It contradicts the user interface experience.");
+	}
+    public void verifyDescription() {
+		wait.until(ExpectedConditions.visibilityOfAllElements(listOfSonysElements));
+		String sonyVaioI5 = listOfSonysElements.get(0).findElement(By.cssSelector("body > div:nth-child(6) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > p:nth-child(3)")).getText();
+		listOfSonysElements.get(0).click();
+		String sonyVaioI5SecondString = "Sony is so confident that the VAIO S is a superior ultraportable laptop that the company proudly compares the notebook to Apple's 13-inch MacBook Pro. And in a lot of ways this notebook is better, thanks to a lighter weight.";
+		assertEquals(sonyVaioI5, sonyVaioI5SecondString, "It contradicts the user interface experience.");
 	}
     public void verifyCategoriesAndNextAndPreviousButtons() {
 		wait.until(ExpectedConditions.visibilityOfAllElements(categoriesOptionsElements));
@@ -409,6 +704,17 @@ public class LoginPageDemoBlaze {
 		categoriesOptionsElements.get(2).click();
 		
 	}
+    public void clickOnTheMonitors1() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector(".list-group a"), 4));
+		categoriesOptionsElements.get(3).click();
+		
+	}
+   
+    public void clickOnTheLaptops2() {
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector(".list-group a"), 4));
+		categoriesOptionsElements.get(2).click();
+		
+	}
     public void verifyImagesPricesAndTitlesUrls1() {
   		SoftAssert softAssert = new SoftAssert();
   		wait.until(ExpectedConditions.visibilityOfAllElements(listItems));
@@ -503,32 +809,27 @@ public class LoginPageDemoBlaze {
   		SoftAssert softAssert = new SoftAssert();
   		wait.until(ExpectedConditions.visibilityOfAllElements(listOfSonysElements));
   		String productName = driver.findElement(By.cssSelector("#tbodyid > div:nth-child(1) > div > div > h4")).getText();
+  
   		String productPrice = driver.findElement(By.cssSelector("#tbodyid > div:nth-child(1) > div > div > h5")).getText();
   		String actualTitleString = driver.getTitle();
-  		listOfSonysElements.get(9).click();
-  		//String productNameAfterClick = "Sony vaio i5";
-  		//String productNameAfterClickItemString= "$790";
-  		String productNameAfterClick = driver.findElement(By.cssSelector("#tbodyid > h2")).getText();
-  		String productNameAfterClickItemString = driver.findElement(By.cssSelector("#tbodyid > h3")).getText();
+  		listOfSonysElements.get(0).click();
+  		String productNameAfterClick = "Samsung galaxy s6";
+  		//String productNameAfterClick = driver.findElement(By.cssSelector("#tbodyid > h2")).getText();
+  		//String productNameAfterClickItemString = driver.findElement(By.cssSelector("#tbodyid > h3")).getText();
+  		String productPriceAfterClickItemString = "$360";
   		String expectedTitleString = "STORE";
-  		softAssert.assertEquals(productName, productNameAfterClick);
-  		softAssert.assertEquals(productPrice, productNameAfterClickItemString);
+  		softAssert.assertNotEquals(productName, productNameAfterClick);
+  		softAssert.assertNotEquals(productPrice, productPriceAfterClickItemString, "The name of the laptop on the second page is identical to that of the first phone in the \"Phones\" category.");
   		softAssert.assertEquals(actualTitleString, expectedTitleString);
   		softAssert.assertAll();
   	}
     public void verifyImagesPricesAndTitlesUrls9() {
   		SoftAssert softAssert = new SoftAssert();
-  		wait.until(ExpectedConditions.visibilityOfAllElements(listItems));
-  		String productName = driver.findElement(By.cssSelector("#tbodyid > div:nth-child(2) > div > div > h4 > a")).getText();
-  		String productPrice = driver.findElement(By.cssSelector("#tbodyid > div:nth-child(2) > div > div > h5")).getText();
-  		String actualTitleString = driver.getTitle();
-  		listItems.get(1).click();
-  		String productNameAfterClick = "Sony vaio i7";
-  		String productNameAfterClickItemString= "$790";
-  		String expectedTitleString = "STORE";
-  		softAssert.assertEquals(productName, productNameAfterClick);
-  		softAssert.assertEquals(productPrice, productNameAfterClickItemString);
-  		softAssert.assertEquals(actualTitleString, expectedTitleString);
+  		wait.until(ExpectedConditions.visibilityOfAllElements(listOfSonysElements));
+  		String productPrice = driver.findElement(By.cssSelector("#tbodyid > div:nth-child(1) > div > div > h5")).getText();
+  		listOfSonysElements.get(0).click();
+  		String productPriceAfterClickItemString= "$360";
+  		softAssert.assertNotEquals(productPrice, productPriceAfterClickItemString, "The price of the laptop on the second page is identical to that of the first phone in the \"Phones\" category.");
   		softAssert.assertAll();
   	}
     public String getImageSrc1() {
