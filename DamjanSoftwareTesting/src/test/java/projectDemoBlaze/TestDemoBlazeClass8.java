@@ -68,6 +68,8 @@ public class TestDemoBlazeClass8 extends BaseTestDemoBlazeClass {
 	  loginPage.clickFirstMonitor();
 	  String actualName = driver.findElement(By.cssSelector("#tbodyid > h3")).getText();
 	  loginPage.verifyMonitors3();
+	  loginPage.acceptAlertIfPresent();
+
 	  String expectedName = "400";
 	  loginPage.clickLinkByIndex(3);
 	  loginPage.clickTheButtonPlaceOrder();
@@ -100,6 +102,8 @@ public class TestDemoBlazeClass8 extends BaseTestDemoBlazeClass {
 		  loginPage.clickSecondMonitor();
 		  String actualName = driver.findElement(By.cssSelector("#tbodyid > h3")).getText();
 		  loginPage.verifyMonitor5();
+		  loginPage.acceptAlertIfPresent();
+
 		  String expectedName = "230";
 		  loginPage.clickLinkByIndex(3);
 		  loginPage.clickTheButtonPlaceOrder();

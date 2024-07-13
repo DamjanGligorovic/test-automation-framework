@@ -5,6 +5,7 @@
     <classes>
       <class name="projectDemoBlaze.TestDemoBlazeClass7">
         <methods>
+          <include name="verifyPriceSonySecond"/>
           <include name="initialization"/>
           <include name="deleteCookie"/>
           <include name="closeDriver"/>

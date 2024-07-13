@@ -55,6 +55,7 @@ public class TestDemoBlazeClass7 extends BaseTestDemoBlazeClass {
 			  loginPage.clickFirstLaptop();
 			  String actualName = driver.findElement(By.cssSelector("#tbodyid > h3")).getText();
 			  loginPage.verifyMonitor8();
+			  loginPage.acceptAlertIfPresent();
 			  String expectedName = "790";
 			  loginPage.clickLinkByIndex(3);
 			  loginPage.clickTheButtonPlaceOrder();
@@ -91,6 +92,8 @@ public class TestDemoBlazeClass7 extends BaseTestDemoBlazeClass {
 			  loginPage.clickSecondLaptop();
 			  String actualName = driver.findElement(By.cssSelector("#tbodyid > h3")).getText();
 			  loginPage.verifyMonitor9();
+			  loginPage.acceptAlertIfPresent();
+
 			  String expectedName = "790";
 			  loginPage.clickLinkByIndex(3);
 			  loginPage.clickTheButtonPlaceOrder();
@@ -127,6 +130,8 @@ public class TestDemoBlazeClass7 extends BaseTestDemoBlazeClass {
 			  loginPage.clickThirdLaptop();
 			  String actualName = driver.findElement(By.cssSelector("#tbodyid > h3")).getText();
 			  loginPage.verifyMonitor11();
+			  loginPage.acceptAlertIfPresent();
+
 			  String expectedName = "700";
 			  loginPage.clickLinkByIndex(3);
 			  loginPage.clickTheButtonPlaceOrder();
@@ -163,6 +168,8 @@ public class TestDemoBlazeClass7 extends BaseTestDemoBlazeClass {
 			  loginPage.clickFourthLaptop();
 			  String actualName = driver.findElement(By.cssSelector("#tbodyid > h3")).getText();
 			  loginPage.verifyMonitor12();
+			  loginPage.acceptAlertIfPresent();
+
 			  String expectedName = "700";
 			  loginPage.clickLinkByIndex(3);
 			  loginPage.clickTheButtonPlaceOrder();
@@ -199,6 +206,8 @@ public class TestDemoBlazeClass7 extends BaseTestDemoBlazeClass {
 			  loginPage.clickFifthLaptop();
 			  String actualName = driver.findElement(By.cssSelector("#tbodyid > h3")).getText();
 			  loginPage.verifyMonitor13();
+			  loginPage.acceptAlertIfPresent();
+
 			  String expectedName = "700";
 			  loginPage.clickLinkByIndex(3);
 			  loginPage.clickTheButtonPlaceOrder();
@@ -235,6 +244,8 @@ public class TestDemoBlazeClass7 extends BaseTestDemoBlazeClass {
 			  loginPage.clickSixthLaptop();
 			  String actualName = driver.findElement(By.cssSelector("#tbodyid > h3")).getText();
 			  loginPage.verifyMonitor14();
+			  loginPage.acceptAlertIfPresent();
+
 			  String expectedName = "1100";
 			  loginPage.clickLinkByIndex(3);
 			  loginPage.clickTheButtonPlaceOrder();

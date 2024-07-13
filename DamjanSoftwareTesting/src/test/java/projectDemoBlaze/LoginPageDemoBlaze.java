@@ -228,7 +228,7 @@ public class LoginPageDemoBlaze {
     @FindBy(css="#imgp > div > img")
     WebElement imageElement14;
     @FindBy(css="[onclick=\"addToCart(1)\"]")
-    WebElement buttonAddToCartElement2;
+    WebElement buttonAddToCartElement1;
     @FindBy(css="[onclick=\"addToCart(4)\"]")
     WebElement buttonAddToCartElement4;
     @FindBy(css="[onclick=\"addToCart(5)\"]")
@@ -605,7 +605,7 @@ public class LoginPageDemoBlaze {
 		wait.until(ExpectedConditions.elementToBeClickable(laptopsOptionElement)).click();
 	}
     public void clickTheButtonAddToCart() {
-		wait.until(ExpectedConditions.elementToBeClickable(buttonAddToCartElement2)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(buttonAddToCartElement1)).click();
 	}
     public void clickIItem() {
 		wait.until(ExpectedConditions.elementToBeClickable(firstItemElement2)).click();
