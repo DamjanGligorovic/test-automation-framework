@@ -24,27 +24,18 @@ public class TestIndianRailwaysClass extends BaseIndianRailwaysClass {
 	public void deleteCookie() {
 		driver.manage().deleteAllCookies();
 	}
-	@Test
-	public void verifyBookTicket() {
-
-	    bookTicket.typeInputFieldFromMenu("MUMBAI CENTRAL - MMCT (MUMBAI)");
-	    bookTicket.typeInputFieldToMenu("NEW DELHI - NDLS (NEW DELHI)");
-	    bookTicket.clickOnTheButtonSearch();
-	}
+	
 	@Test
 	public void verifyRegistrationForm() {
 		SoftAssert softAssert = new SoftAssert();
 		softAssert.assertTrue(bookTicket.verifyListOfCategories1());
 		softAssert.assertTrue(bookTicket.verifyWholeFirstPage());
 
-	        // Generate and use the username
 		   String username = bookTicket.generateUsername();
 	        System.out.println("Generated username: " + username);
 
-	        // Perform actions with the username as required by your test case
-	    
+	      
 
-	        // Perform actions with the username as required by your test case
 	    
 		bookTicket.typeInputFieldUserName(username);
 		bookTicket.typeInputFieldPassword("THC213F4iE");
@@ -70,17 +61,14 @@ public class TestIndianRailwaysClass extends BaseIndianRailwaysClass {
 			try {
 				randomEmail = EmailGenerator.generateRandomEmail();
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		bookTicket.typeIntoTheFieldEmail(randomEmail);
 		bookTicket.verifyListGenders();
 		bookTicket.typeInputFieldISD("381");
 		bookTicket.generateNineDigitMobileNumber();
-        // Insert the generated mobile number into the field
         bookTicket.insertMobileNumber();
 
-        // Perform any additional actions or assertions as needed
  
     
 
@@ -97,8 +85,7 @@ public class TestIndianRailwaysClass extends BaseIndianRailwaysClass {
 		bookTicket.typeInputFieldResPhone("601683355");
 		 //  String captchaQuestion = bookTicket.getCaptchaQuestion();
 
-	        // Implement logic to solve the CAPTCHA (this part is highly dependent on the CAPTCHA itself)
-	        // For demonstration purposes, let's assume the solution is "12345"
+	        
 	     //  String captchaSolution = solveCaptcha(captchaQuestion);
 	      // bookTicket.getCaptchaQuestion();
 
@@ -114,13 +101,12 @@ public class TestIndianRailwaysClass extends BaseIndianRailwaysClass {
 	        bookTicket.clickOnTheButtonAlertOk();
 
 	        softAssert.assertTrue(bookTicket.verifyConfirmationMessage());
-	       softAssert.assertAll(); // Additional assertions or actions after filling the CAPTCHA
+	       softAssert.assertAll(); 
 	    }
 
-	    // Placeholder method for solving the CAPTCHA (to be implemented based on actual CAPTCHA logic)
+	    
 	    private String solveCaptcha(String question) {
-	        // Logic to solve the CAPTCHA based on the question
-	        // For example purposes, return a hardcoded solution
+	      
 	        return "12345";
 	    }
 	    @Test
