@@ -3,17 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="projectDemoBlaze.TestDemoBlazeClass7">
+      <class name="projectIndianRailways.TestIndianRailwaysClass">
         <methods>
-          <include name="verifyPriceSonySecond"/>
+          <include name="verifyRegistrationForm"/>
           <include name="initialization"/>
           <include name="deleteCookie"/>
-          <include name="closeDriver"/>
           <include name="navigation"/>
-          <include name="verifyPricesFromSecondToThirdPageSecond"/>
-          <include name="setUp"/>
         </methods>
-      </class> <!-- projectDemoBlaze.TestDemoBlazeClass7 -->
+      </class> <!-- projectIndianRailways.TestIndianRailwaysClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
