@@ -5,10 +5,10 @@
     <classes>
       <class name="projectIndianRailways.TestIndianRailwaysClass">
         <methods>
-          <include name="verifyRegistrationForm"/>
           <include name="initialization"/>
           <include name="deleteCookie"/>
           <include name="navigation"/>
+          <include name="fillOutLoginFormPage"/>
         </methods>
       </class> <!-- projectIndianRailways.TestIndianRailwaysClass -->
     </classes>

@@ -31,10 +31,14 @@ public class LoginIndianRailwaysClass {
 	WebElement inputField_ToMenu;
 	@FindBy(css=".ng-tns-c58-10.ui-inputtext.ui-widget.ui-state-default.ui-corner-all.ng-star-inserted")
 	WebElement ddMMYY;
-	@FindBy(css=".ng-tns-c65-11.ui-dropdown.ui-widget.ui-state-default.ui-corner-all")
-	WebElement classesList;
-	@FindBy(css=".ng-tns-c65-12.ui-dropdown.ui-widget.ui-state-default.ui-corner-all")
-	WebElement levelList;
+	@FindBy(css="#journeyClass > div")
+	WebElement allClassesMenu;
+	@FindBy(css="#journeyQuota > div")
+	WebElement generalMenuElement;
+	@FindBy(css="#journeyQuota > div > div.ng-trigger.ng-trigger-overlayAnimation.ng-tns-c65-30.ui-dropdown-panel.ui-widget.ui-widget-content.ui-corner-all.ui-shadow.ng-star-inserted > div > ul > p-dropdownitem:nth-child(3) > li > span")
+	WebElement lowerCitizen;
+	@FindBy(css="#journeyClass > div > div.ng-trigger.ng-trigger-overlayAnimation.ng-tns-c65-29.ui-dropdown-panel.ui-widget.ui-widget-content.ui-corner-all.ui-shadow.ng-star-inserted > div > ul > p-dropdownitem:nth-child(3) > li > span")
+	WebElement levelAC1;
 	@FindBy(css="label[for='concessionBooking']")
 	WebElement checkbox_PersonWithDisabilityConcession;
 	@FindBy(css="label[for='dateSpecific']")
@@ -47,6 +51,8 @@ public class LoginIndianRailwaysClass {
 	WebElement button_Search;
 	@FindBy(css="input.form-control.ng-untouched.ng-pristine.ng-invalid")
 	WebElement invisibleElement1;
+	@FindBy(css="#divMain > div > app-main-page > div > div > div.level_2.slanted-div > div.col-xs-12.remove-padding.tbis-box > div:nth-child(1) > app-jp-input > div > div")
+	WebElement random_ClickElement;
 	//Selectors for Registration Page------------- B A S I C   D E T A I L S----------------------------------------------------------------------------------------------------------------
 	@FindBy(css="a[aria-label='Click here to register your account with I.R.C.T.C.']")
 	WebElement link_REGISTER;
@@ -196,6 +202,26 @@ public class LoginIndianRailwaysClass {
 	WebElement alert_optionOk;
 	@FindBy(css="#divMain > div > app-user-registration > div > div > form > div > div.col-md-7.col-sm-12.col-xs-12.remove-pad.userReg2.thirdPage > div > div.ng-star-inserted > div:nth-child(1)")
 	WebElement confirmation_Message;
+	//Login Page------------------------------------------------------------------------------------------
+	@FindBy(css="[formcontrolname=\"userid\"]")
+	WebElement inputField_UserNameElement;
+	@FindBy(css="[formcontrolname=\"password\"]")
+	WebElement inputField_PasswordElement;
+	@FindBy(css="button[class='search_btn train_Search']")
+	WebElement ButtonSignInO;
+	@FindBy(xpath="//*[@id=\"divMain\"]/div/app-user-registration/div/div/form/div/div[2]/div[1]/div[1]/span[2]/a/u/strong")
+	WebElement link_SignIn1;
+	@FindBy(css ="div[class='alert alert-info'] p")
+	WebElement confirmation_MessageInfo;
+	//Ticket page---------------------------------------------------------------------------------------
+	@FindBy(css="#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.ng-star-inserted > div:nth-child(2) > div.form-group.no-pad.col-xs-12.bull-back.border-all > app-train-avl-enq > div.ng-star-inserted > div:nth-child(5) > div.white-back.col-xs-12.ng-star-inserted > table > tr > td:nth-child(3) > div")
+	WebElement option_A1;
+	@FindBy(css="#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.ng-star-inserted > div:nth-child(2) > div.form-group.no-pad.col-xs-12.bull-back.border-all > app-train-avl-enq > div.ng-star-inserted > div:nth-child(7) > div:nth-child(1) > div.ng-star-inserted > table > tr > td:nth-child(4) > div")
+	WebElement option_ThursdayAvailable;
+	@FindBy(css="#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.ng-star-inserted > div:nth-child(2) > div.form-group.no-pad.col-xs-12.bull-back.border-all > app-train-avl-enq > div.col-xs-12 > div > span > span:nth-child(1) > button.btnDefault.train_Search.ng-star-inserted")
+	WebElement button_BookTicket;
+	@FindBy(css="#divMain > div > app-train-list > p-confirmdialog.ng-tns-c56-15 > div > div > div.ui-dialog-footer.ui-widget-content.ng-tns-c56-15.ng-star-inserted > button.ng-tns-c56-15.ui-confirmdialog-acceptbutton.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icon-left.ng-star-inserted > span.ui-button-text.ui-clickable")
+	WebElement option_Yes;
 	public LoginIndianRailwaysClass (WebDriver driver) {
 	this.driver = driver;
 	PageFactory.initElements(driver, this);
@@ -204,6 +230,18 @@ public class LoginIndianRailwaysClass {
 
 	}
 	//Inserting Methods----------------------------------------------------------------------------------------------------------------------------
+	public void typeInputFieldUserNameLoginpage(String input) {
+		wait.until(ExpectedConditions.visibilityOf(inputField_UserNameElement));
+		inputField_UserNameElement.clear();
+		inputField_UserNameElement.sendKeys(input);
+	}
+	public void typeInputFieldPasswordLoginpage(String input) {
+		wait.until(ExpectedConditions.visibilityOf(inputField_PasswordElement));
+		inputField_PasswordElement.clear();
+		inputField_PasswordElement.sendKeys(input);
+	}
+	
+	
 	public void typeInputFieldFlat(String input) {
 		wait.until(ExpectedConditions.visibilityOf(inputField_FlatDoorBlockNo));
 		inputField_FlatDoorBlockNo.clear();
@@ -296,6 +334,55 @@ public class LoginIndianRailwaysClass {
 		 inputField_ISD.sendKeys(input);
 	}
 	 //Clicking Methods-----------------------------------------------------------------------------------------------------------------------------------------
+	 public void clickOnTheButtonSignInRegistrationPage() {
+		 wait.until(ExpectedConditions.elementToBeClickable(link_SignIn1)).click();
+		}
+	 public void clickOnTheButtonBookTicket() {
+		 wait.until(ExpectedConditions.elementToBeClickable(button_BookTicket)).click();
+		}
+	 public void clickOnTheButtonYes() {
+		 wait.until(ExpectedConditions.elementToBeClickable(option_Yes)).click();
+		}
+	 public void clickOnTheOptionThursdayAvailable() {
+		 wait.until(ExpectedConditions.elementToBeClickable(option_ThursdayAvailable)).click();
+		}
+	 public void clickOnTheOptionA1() {
+		 wait.until(ExpectedConditions.elementToBeClickable(option_A1)).click();
+		}
+	 public void clickOnTheRandomClick() {
+		 wait.until(ExpectedConditions.elementToBeClickable(random_ClickElement)).click();
+		}
+	 public void clickOnTheButtonSearchSubmit() {
+		 wait.until(ExpectedConditions.elementToBeClickable(button_Search)).click();
+		}
+	 public void clickOnTheCheckboxPersonWithDisability() {
+		 wait.until(ExpectedConditions.elementToBeClickable(checkbox_PersonWithDisabilityConcession)).click();
+		}
+	 public void clickOnTheCheckboxFlexibility() {
+		 wait.until(ExpectedConditions.elementToBeClickable(checkbox_FlexibleWithDate)).click();
+		}
+	 public void clickOnTheCheckboxWithAvailableBerth() {
+		 wait.until(ExpectedConditions.elementToBeClickable(checkbox_TrainWithAvailableBerth)).click();
+		}
+	 public void clickOnTheCheckboxRailWayConcession() {
+		 wait.until(ExpectedConditions.elementToBeClickable(checkbox_RailWayPassConcession)).click();
+		}
+	 public void clickOnTheMenuAllClasses() {
+		 wait.until(ExpectedConditions.elementToBeClickable(allClassesMenu)).click();
+		 wait.until(ExpectedConditions.elementToBeClickable(levelAC1)).click();
+
+		}
+	 public void clickOnTheMenuGeneralClasses() {
+		 wait.until(ExpectedConditions.elementToBeClickable(generalMenuElement)).click();
+		 wait.until(ExpectedConditions.elementToBeClickable(lowerCitizen)).click();
+
+		}
+	 public void clickOnTheButtonSignIn() {
+		 wait.until(ExpectedConditions.elementToBeClickable(ButtonSignInO)).click();
+		}
+	 public void clickOnTheLinkSignInLoginPage() {
+		 wait.until(ExpectedConditions.elementToBeClickable(link_SignIn)).click();
+		}
 	 public void clickOnTheButtonSearch() {
 	 wait.until(ExpectedConditions.elementToBeClickable(button_Search)).click();
 	}
@@ -432,7 +519,12 @@ public class LoginIndianRailwaysClass {
 		 wait.until(ExpectedConditions.visibilityOf(menu_DateOfBirth)).sendKeys(input);
 		 wait.until(ExpectedConditions.elementToBeClickable(inputField_LastName)).click();
 	 }
-	 public void verifyListMonths() {
+	 public void verifyListButtonsSign() {
+		 wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("[type=\"submit\"]"), 3));
+		 list_Months.get(2).click();
+	
+		}
+	 public void verifyListButtonsSignIn() {
 		 wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector(".ui-datepicker-month.ng-tns-c58-10.ng-star-inserted option"), 12));
 		 list_Months.get(3).click();
 	
@@ -474,6 +566,10 @@ public class LoginIndianRailwaysClass {
 	 public boolean verifyListOfCategories2() {
 		 wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("[role=\"tablist\"] li"), 3));
 		 	 return categories_list.get(1).isEnabled();
+		}
+	 public boolean verifyConfirmationInfoMessage() {
+		 wait.until(ExpectedConditions.visibilityOf(confirmation_MessageInfo));
+		 	 return confirmation_MessageInfo.isDisplayed();
 		}
 	 public boolean verifyWholeSecondPage() {
 		 wait.until(ExpectedConditions.visibilityOf(secondPage_UserReg2));

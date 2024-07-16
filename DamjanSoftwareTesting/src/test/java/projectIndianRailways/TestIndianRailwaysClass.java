@@ -58,7 +58,6 @@ public class TestIndianRailwaysClass extends BaseIndianRailwaysClass {
 		bookTicket.typeInputFieldISD("381");
 		bookTicket.generateNineDigitMobileNumber();
         bookTicket.insertMobileNumber();
-	//	bookTicket.typeInputFieldMobile("");
 		bookTicket.verifyListNationality1();
 		bookTicket.clickOnTheContinue();
 		softAssert.assertTrue(bookTicket.verifyListOfCategories3());
@@ -84,6 +83,30 @@ public class TestIndianRailwaysClass extends BaseIndianRailwaysClass {
 	    private String solveCaptcha(String question) {
 	    return "12345";
 	    }
+//Booking Ticket and Login Page------------------------------------------------------------------------------
+	@Test
+	public void fillOutLoginFormPageAndBookTicket() throws InterruptedException {
+		SoftAssert softAssert = new SoftAssert();
+		//bookTicket.clickOnTheLinkSignInLoginPage();
+
+	    driver.get("https://www.irctc.co.in/nget/train-search?a=1-2,570-690");
+	    bookTicket.typeInputFieldFromMenu("MUMBAI CENTRAL - MMCT (MUMBAI)");
+	    bookTicket.typeInputFieldToMenu("NEW DELHI - NDLS (NEW DELHI)");
+	    bookTicket.clickOnTheRandomClick();
+	    bookTicket.clickOnTheButtonSearchSubmit();
+	    bookTicket.clickOnTheOptionA1();
+	    bookTicket.clickOnTheOptionThursdayAvailable();
+	    bookTicket.clickOnTheButtonBookTicket();
+	    bookTicket.clickOnTheButtonYes();
+	    bookTicket.typeInputFieldUserNameLoginpage("ereeRewre34RE");
+	    bookTicket.typeInputFieldPasswordLoginpage("Felina1010");
+	    bookTicket.solveCaptchaManually1();
+	    bookTicket.clickOnTheButtonSignIn();
+	    Thread.sleep(500);
+	    softAssert.assertTrue(bookTicket.verifyConfirmationInfoMessage());
+	    }
+	
+	    
 	@Test
 	public void verifyDriver() {
 	    driver.get("https://www.irctc.co.in/nget/train-search");
