@@ -76,7 +76,6 @@ public class TestIndianRailwaysClass extends BaseIndianRailwaysClass {
 	     // bookTicket.pressEnter();
 		bookTicket.verifyListYes();				
 		bookTicket.solveCaptchaManually1();
-	     //bookTicket.clickOnTheLinkTerms();
 	    bookTicket.clickOnTheTermsAndCondition();
 	    bookTicket.clickOnTheButtonRegister();
 	    bookTicket.clickOnTheButtonAlertOk();
