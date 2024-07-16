@@ -105,7 +105,32 @@ public class TestIndianRailwaysClass extends BaseIndianRailwaysClass {
 	    Thread.sleep(500);
 	    softAssert.assertTrue(bookTicket.verifyConfirmationInfoMessage());
 	    }
-	
+	@Test
+	public void fillOutLoginFormPageAndBookTicket1() throws InterruptedException {
+		SoftAssert softAssert = new SoftAssert();
+		//bookTicket.clickOnTheLinkSignInLoginPage();
+
+	    driver.get("https://www.irctc.co.in/nget/train-search?a=1-2,570-690");
+	    bookTicket.typeInputFieldFromMenu("HYDERABAD DECAN - HYB (SECUNDERABAD)");
+	    bookTicket.typeInputFieldToMenu("AHMEDABAD JN - ADI (AHMEDABAD)");
+	    bookTicket.clickOnTheRandomClick();
+	    bookTicket.typeInputDate("18/09/2024");
+	    bookTicket.clickOnTheRandomClick();
+
+	   //bookTicket.clickOnTheDart();
+	 //   bookTicket.clickOnTheDart();
+	    bookTicket.clickOnTheDDMMYY();
+	   bookTicket.clickOnTheChosenDate();
+	    bookTicket.clickOnTheRandomClick();
+	    bookTicket.clickListAllClasses();
+	    bookTicket.clickOnTheRandomClick();
+	    bookTicket.clickListGeneralClasses();
+	    bookTicket.clickOnTheButtonOK();
+	    bookTicket.clickOnTheButtonSearchSubmit();
+	    softAssert.assertTrue(bookTicket.verifyNegativeConfirmationMessage());
+	   
+	   
+	    }
 	    
 	@Test
 	public void verifyDriver() {

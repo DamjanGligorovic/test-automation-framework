@@ -8,7 +8,7 @@
           <include name="initialization"/>
           <include name="deleteCookie"/>
           <include name="navigation"/>
-          <include name="fillOutLoginFormPage"/>
+          <include name="fillOutLoginFormPageAndBookTicket1"/>
         </methods>
       </class> <!-- projectIndianRailways.TestIndianRailwaysClass -->
     </classes>
