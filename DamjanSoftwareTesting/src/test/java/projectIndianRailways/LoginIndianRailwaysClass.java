@@ -327,7 +327,6 @@ public class LoginIndianRailwaysClass {
 	 public void clickOnTheTermsAndCondition() {
 		//Select select = new Select(checkbox_TermsAndConditions);
 		 wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[class='ng-untouched ng-pristine ng-invalid']")));
-		    // Retry clicking if the element is not clickable
 		    for (int attempt = 0; attempt < 3; attempt++) {
 		        try {
 		            if (checkbox_TermsAndConditions.isDisplayed() && checkbox_TermsAndConditions.isEnabled()) {
@@ -495,23 +494,18 @@ public class LoginIndianRailwaysClass {
 	actions.moveToElement(reCaptcha).sendKeys(Keys.ENTER);
 	}
 	 public void solveRecaptchaManually() {
-		    // Pause the test and wait for the user to solve the reCAPTCHA
 		    WebElement reCaptchaFrame = driver.findElement(By.cssSelector("iframe[src^='https://www.google.com/recaptcha/api2/anchor']"));
 		    driver.switchTo().frame(reCaptchaFrame);
 
-		    // Click on the reCAPTCHA checkbox to activate it
 		    driver.findElement(By.cssSelector("#recaptcha-anchor")).click();
 
-		    // Wait for the user to solve the reCAPTCHA
 		    System.out.println("Please solve the reCAPTCHA manually and press Enter to continue...");
 		    Scanner scanner = new Scanner(System.in);
 		    
 		    scanner.nextLine(); // Wait for the user to press Enter
 
-		    // Switch back to the main window
 		    driver.switchTo().defaultContent();
 		}
-	    // Method to get the CAPTCHA question text
 	    public String getCaptchaQuestion() {
 	        return captchaQuestion.getText();
 	    }
@@ -519,7 +513,6 @@ public class LoginIndianRailwaysClass {
 		 wait.until(ExpectedConditions.invisibilityOf(thirdPage_UserReg3));
 		 	// return thirdPage_UserReg3.isEnabled();
 		}
-	 //Invisible methods
 	 public void verifyInvisibleMethods() {
 		wait.until(ExpectedConditions.invisibilityOf(element_ShouldBeInsivisle));
 	}
@@ -534,22 +527,18 @@ public class LoginIndianRailwaysClass {
 	 	public void verifyInvisibleMethodThirdPage() {
 			wait.until(ExpectedConditions.invisibilityOf(thirdPage_UserReg3));
 		}
-	    // Method to click the checkbox using JavaScript
 	    public void clickCheckboxUsingJS() {
 	        JavascriptExecutor js = (JavascriptExecutor) driver;
 	        js.executeScript("arguments[0].click();", checkbox_TermsAndConditions);
 	    }
 
-	    // Method to scroll to the checkbox and click it
 	    public void scrollToElementAndClick() {
 	        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", checkbox_TermsAndConditions);
 	        checkbox_TermsAndConditions.click();
 	    }
 	    public String generateNineDigitMobileNumber() {
 	    	SecureRandom random = new SecureRandom();
-	        // Generate an 8-digit random number (10,000,000 to 99,999,999)
 	        int eightDigitNumber = random.nextInt()  ;
-	        // Prepend a '0' to the number to make it a 9-digit number starting with '0'
 	        return "6" + String.valueOf(eightDigitNumber);
 	    }
 
@@ -561,23 +550,16 @@ public class LoginIndianRailwaysClass {
 	        inputField_Mobile.sendKeys(mobileNumber);
 	    }
 	    public String generateUsername() {
-	        // Define the characters that can be used in the username (only letters and numbers)
 	        String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-	        // Create a secure random number generator
 	        SecureRandom random = new SecureRandom();
-	        // Define the length of the username
-	        int usernameLength = 8; // You can adjust the length as needed
-	        // Create a buffer to hold the username
+	        int usernameLength = 8; 
 	        char[] usernameBuffer = new char[usernameLength];
-	        // Generate the username
 	        for (int i = 0; i < usernameLength; i++) {
 	            usernameBuffer[i] = characters.charAt(random.nextInt(characters.length()));
 	        }
-	        // Return the generated username as a string
 	        return new String(usernameBuffer);
 	    }
 	    public void solveCaptchaManually1() {
-	        // Pause the test and wait for the user to solve the CAPTCHA
 	        System.out.println("Please solve the CAPTCHA manually and press Enter to continue...");
 	        try {
 	            System.in.read(); // Wait for the user to press Enter
@@ -585,11 +567,10 @@ public class LoginIndianRailwaysClass {
 	            e.printStackTrace();
 	        }
 
-	        // Continue with the test after the CAPTCHA is solved
-	        // ...
+	      
 	    }
 	}
 
-	    // Other page object methods...
+	    
 	
 
