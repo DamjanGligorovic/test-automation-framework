@@ -62,7 +62,6 @@ public class TestIndianRailwaysClass extends BaseIndianRailwaysClass {
 		bookTicket.verifyListNationality1();
 		bookTicket.clickOnTheContinue();
 		softAssert.assertTrue(bookTicket.verifyListOfCategories3());
-		//Address
 		bookTicket.typeInputFieldFlat("Second Floor Kuna 22");
 		bookTicket.typeInputFieldPinCode("18000");
 		bookTicket.typeInputFieldCity("Nis");
