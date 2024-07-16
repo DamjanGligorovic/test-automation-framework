@@ -39,16 +39,12 @@ public class TestIndianRailwaysClass extends BaseIndianRailwaysClass {
 		bookTicket.clickOnTheContinue();
 		softAssert.assertTrue(bookTicket.verifyListOfCategories2());
 		softAssert.assertTrue(bookTicket.verifyWholeSecondPage());
-		//Personal Details
 		bookTicket.typeInputFieldFirstName("Damjan");
 		bookTicket.typeInputFieldMiddleName("Goran");
 		bookTicket.typeInputFieldLastName("Gligorovic");
 		bookTicket.verifyListOccupation1();
 		bookTicket.verifyListDateOfBirt1("01-04-1993");
 		bookTicket.clickOnTheLastNameField();
-		//bookTicket.verifyListYears();
-		//bookTicket.verifyListMonths();
-		//bookTicket.verifyListDays();
 		bookTicket.verifyListRadioButtons();
 		bookTicket.verifyListCountries1();
 		 String randomEmail = null;
@@ -90,8 +86,6 @@ public class TestIndianRailwaysClass extends BaseIndianRailwaysClass {
 	    private String solveCaptcha(String question) {
 	    return "12345";
 	    }
-	   
-
 	@Test
 	public void verifyDriver() {
 	    driver.get("https://www.irctc.co.in/nget/train-search");
