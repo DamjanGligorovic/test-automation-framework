@@ -93,6 +93,8 @@ public class TestIndianRailwaysClass extends BaseIndianRailwaysClass {
 	    bookTicket.typeInputFieldFromMenu("MUMBAI CENTRAL - MMCT (MUMBAI)");
 	    bookTicket.typeInputFieldToMenu("NEW DELHI - NDLS (NEW DELHI)");
 	    bookTicket.clickOnTheRandomClick();
+	    bookTicket.clickOnTheDDMMYY();
+		bookTicket.clickOnTheChosenDate();
 	    bookTicket.clickOnTheButtonSearchSubmit();
 	    bookTicket.clickOnTheOptionA1();
 	    bookTicket.clickOnTheOptionThursdayAvailable();
@@ -102,36 +104,96 @@ public class TestIndianRailwaysClass extends BaseIndianRailwaysClass {
 	    bookTicket.typeInputFieldPasswordLoginpage("Felina1010");
 	    bookTicket.solveCaptchaManually1();
 	    bookTicket.clickOnTheButtonSignIn();
-	    Thread.sleep(500);
 	    softAssert.assertTrue(bookTicket.verifyConfirmationInfoMessage());
 	    }
 	@Test
 	public void fillOutLoginFormPageAndBookTicket1() throws InterruptedException {
 		SoftAssert softAssert = new SoftAssert();
-		//bookTicket.clickOnTheLinkSignInLoginPage();
-
 	    driver.get("https://www.irctc.co.in/nget/train-search?a=1-2,570-690");
 	    bookTicket.typeInputFieldFromMenu("HYDERABAD DECAN - HYB (SECUNDERABAD)");
 	    bookTicket.typeInputFieldToMenu("AHMEDABAD JN - ADI (AHMEDABAD)");
 	    bookTicket.clickOnTheRandomClick();
-	    bookTicket.typeInputDate("18/09/2024");
-	    bookTicket.clickOnTheRandomClick();
-
-	   //bookTicket.clickOnTheDart();
-	 //   bookTicket.clickOnTheDart();
 	    bookTicket.clickOnTheDDMMYY();
 	   bookTicket.clickOnTheChosenDate();
 	    bookTicket.clickOnTheRandomClick();
 	    bookTicket.clickListAllClasses();
 	    bookTicket.clickOnTheRandomClick();
 	    bookTicket.clickListGeneralClasses();
+	  //  bookTicket.clickOnTheOptionNo();
+
+	   bookTicket.clickOnTheOptionOK();
+	    String actualUrlString = driver.getCurrentUrl();
+	    String expectedUrlString = "https://www.irctc.co.in/nget/train-search?a=1-2,570-690";
+	    softAssert.assertEquals(actualUrlString, expectedUrlString);
+			
+		
+	    }
+	@Test
+	public void fillOutLoginFormPageAndBookTicket2() throws InterruptedException {
+		SoftAssert softAssert = new SoftAssert();
+		//bookTicket.clickOnTheLinkSignInLoginPage();
+
+	    driver.get("https://www.irctc.co.in/nget/train-search?a=1-2,570-690");
+	    bookTicket.typeInputFieldFromMenu("CHENNAI EGMORE - MS (CHENNAI)");
+	    bookTicket.typeInputFieldToMenu("KOLKATA - KOAA (Howrah / Kolkata)");
+	    bookTicket.clickOnTheRandomClick();
+	    bookTicket.clickOnTheDDMMYY();
+	    bookTicket.clickOnTheChosenDate1();
+	    bookTicket.clickOnTheRandomClick();
+	    bookTicket.clickListAllClasses1();
+	    bookTicket.clickOnTheRandomClick();
+	    bookTicket.clickListGeneralClasses();
 	    bookTicket.clickOnTheButtonOK();
 	    bookTicket.clickOnTheButtonSearchSubmit();
 	    softAssert.assertTrue(bookTicket.verifyNegativeConfirmationMessage());
-	   
-	   
 	    }
-	    
+	@Test
+	public void fillOutLoginFormPageAndBookTicket3() throws InterruptedException {
+		SoftAssert softAssert = new SoftAssert();
+		//bookTicket.clickOnTheLinkSignInLoginPage();
+
+	    driver.get("https://www.irctc.co.in/nget/train-search?a=1-2,570-690");
+	    bookTicket.typeInputFieldFromMenu("SURAT - ST ");
+	    bookTicket.typeInputFieldToMenu("PUNE JN - PUNE (PUNE)");
+	    bookTicket.clickOnTheRandomClick();
+	    bookTicket.clickOnTheDDMMYY();
+	    bookTicket.clickOnTheChosenDate2();
+	    bookTicket.clickOnTheRandomClick();
+	    bookTicket.clickListAllClasses2();
+	    bookTicket.clickOnTheRandomClick();
+	    bookTicket.clickListGeneralClasses3();
+	   // bookTicket.clickOnTheButtonOK();
+	    bookTicket.clickOnTheButtonSearchSubmit();
+	    softAssert.assertTrue(bookTicket.verifyNegativeConfirmationMessage());
+	    }
+	@Test
+	public void fillOutLoginFormPageAndBookTicket4() throws InterruptedException {
+		SoftAssert softAssert = new SoftAssert();
+		//bookTicket.clickOnTheLinkSignInLoginPage();
+
+	    driver.get("https://www.irctc.co.in/nget/train-search?a=1-2,570-690");
+	    bookTicket.typeInputFieldFromMenu("JAIPUR - JP (JAIPUR)");
+	    bookTicket.typeInputFieldToMenu("LUCKNOW NR - LKO (LUCKNOW)");
+	    bookTicket.clickOnTheRandomClick();
+	    bookTicket.clickOnTheDDMMYY();
+	    bookTicket.clickOnTheChosenDate3();
+	    bookTicket.clickOnTheRandomClick();
+	    bookTicket.clickListAllClasses3();
+	    bookTicket.clickOnTheRandomClick();
+	    bookTicket.clickListGeneralClasses4();
+	    bookTicket.clickOnTheButtonOK();
+	    bookTicket.clickOnTheButtonSearchSubmit();
+	    //bookTicket.clickOnTheOptionSL();
+	   // bookTicket.clickOnTheOptionMonday();
+	   // bookTicket.clickOnTheButtonBookTicket();
+	   // bookTicket.clickOnTheButtonYes();
+	    //bookTicket.typeInputFieldUserNameLoginpage("ereeRewre34RE");
+	   // bookTicket.typeInputFieldPasswordLoginpage("Felina1010");
+	   // bookTicket.solveCaptchaManually1();
+	   // bookTicket.clickOnTheButtonSignIn();
+	    softAssert.assertTrue(bookTicket.verifyNegativeConfirmationMessage());
+
+	    }
 	@Test
 	public void verifyDriver() {
 	    driver.get("https://www.irctc.co.in/nget/train-search");

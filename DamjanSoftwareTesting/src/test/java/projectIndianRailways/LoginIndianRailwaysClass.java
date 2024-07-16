@@ -1,6 +1,7 @@
 package projectIndianRailways;
 
 import java.io.IOException;
+import java.security.PublicKey;
 import java.security.SecureRandom;
 import java.time.Duration;
 import java.util.List;
@@ -35,8 +36,14 @@ public class LoginIndianRailwaysClass {
 	WebElement input_ddMMYYElement;
 	@FindBy(css="#divMain > div > app-main-page > div > div > div.level_2.slanted-div > div.col-xs-12.remove-padding.tbis-box.tbis-box-pad > div:nth-child(1) > app-jp-input > div > form > div:nth-child(2) > div.col-md-5.col-xs-12.remove-padding > div.form-group.ui-float-label")
 	WebElement ddMMYYActionExperimentElement;
-	@FindBy(css="#jDate > span > div > div > div.ui-datepicker-calendar-container.ng-tns-c58-10.ng-star-inserted > table > tbody > tr:nth-child(4) > td:nth-child(5) > a")
+	@FindBy(xpath ="//a[normalize-space()='28']")
 	WebElement theChosenDataElement;
+	@FindBy(xpath ="//a[normalize-space()='29']")
+	WebElement theChosenDataElement1;
+	@FindBy(xpath ="//a[normalize-space()='30']")
+	WebElement theChosenDataElement2;
+	@FindBy(xpath ="//a[normalize-space()='31']")
+	WebElement theChosenDataElement3;
 	@FindBy(css="#journeyClass > div")
 	WebElement allClassesMenu;
 	@FindBy(css=".ng-tns-c65-12.ng-star-inserted")
@@ -59,6 +66,8 @@ public class LoginIndianRailwaysClass {
 	WebElement invisibleElement1;
 	@FindBy(css="#divMain > div > app-main-page > div > div > div.level_2.slanted-div > div.col-xs-12.remove-padding.tbis-box > div:nth-child(1) > app-jp-input > div > div")
 	WebElement random_ClickElement;
+	@FindBy(css=".ng-tns-c58-58.ng-star-inserted td")
+	List<WebElement> list_CalendarDaysElements;
 	//Selectors for Registration Page------------- B A S I C   D E T A I L S----------------------------------------------------------------------------------------------------------------
 	@FindBy(css="a[aria-label='Click here to register your account with I.R.C.T.C.']")
 	WebElement link_REGISTER;
@@ -225,9 +234,17 @@ public class LoginIndianRailwaysClass {
 	List<WebElement> list_GeneralClasses; 
 	@FindBy(css="ui-datepicker-next-icon pi pi-chevron-right ng-tns-c58-10")
 	WebElement dartElement;
+	@FindBy(css="body > app-root > app-home > div.header-fix > app-header > p-toast > div > p-toastitem > div > div")
+	WebElement errorMessageElement;
+	@FindBy(css="#divMain > div > app-train-list > p-toast > div")
+	WebElement invalidMessageElement;
 	//Ticket page---------------------------------------------------------------------------------------
 	@FindBy(css="#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.ng-star-inserted > div:nth-child(2) > div.form-group.no-pad.col-xs-12.bull-back.border-all > app-train-avl-enq > div.ng-star-inserted > div:nth-child(5) > div.white-back.col-xs-12.ng-star-inserted > table > tr > td:nth-child(3) > div")
 	WebElement option_A1;
+	@FindBy(css="#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.ng-star-inserted > div.ng-star-inserted > div.form-group.no-pad.col-xs-12.bull-back.border-all > app-train-avl-enq > div.ng-star-inserted > div:nth-child(5) > div.white-back.col-xs-12.ng-star-inserted > table > tr > td:nth-child(1) > div > div:nth-child(1) > strong")
+	WebElement option_SL;
+	@FindBy(css="#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.ng-star-inserted > div.ng-star-inserted > div.form-group.no-pad.col-xs-12.bull-back.border-all > app-train-avl-enq > div.ng-star-inserted > div:nth-child(7) > div:nth-child(1) > div.ng-star-inserted > table > tr > td:nth-child(5) > div > div:nth-child(1) > strong")
+	WebElement option_MonElement;
 	@FindBy(css="#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.ng-star-inserted > div:nth-child(2) > div.form-group.no-pad.col-xs-12.bull-back.border-all > app-train-avl-enq > div.ng-star-inserted > div:nth-child(7) > div:nth-child(1) > div.ng-star-inserted > table > tr > td:nth-child(4) > div")
 	WebElement option_ThursdayAvailable;
 	@FindBy(css="#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.ng-star-inserted > div:nth-child(2) > div.form-group.no-pad.col-xs-12.bull-back.border-all > app-train-avl-enq > div.col-xs-12 > div > span > span:nth-child(1) > button.btnDefault.train_Search.ng-star-inserted")
@@ -238,6 +255,14 @@ public class LoginIndianRailwaysClass {
 	WebElement option_OK;
 	@FindBy(css="#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.text-center.col-xs-12.ng-star-inserted > span")
 	WebElement negativeConfirmationMessagElement;
+	@FindBy(css="#divMain > div > app-train-list > div.col-sm-9.col-xs-12 > div > div.text-center.col-xs-12.ng-star-inserted > span")
+	WebElement negativeConfirmationMessageNoElement;
+	@FindBy(css="body > app-root > app-home > div.header-fix > app-header > p-toast > div > p-toastitem > div > div")
+	WebElement error_MessagElement1;
+	@FindBy(css="#divMain > div > app-main-page > div > div > div.level_2.slanted-div > div.col-xs-12.remove-padding.tbis-box.tbis-box-pad > div:nth-child(1) > app-jp-input > p-confirmdialog > div > div > div.ui-dialog-footer.ui-widget-content.ng-tns-c56-7.ng-star-inserted > button > span.ui-button-text.ui-clickable")
+	WebElement option_OKElement;
+	@FindBy(css="#divMain > div > app-main-page > div > div > div.level_2.slanted-div > div.col-xs-12.remove-padding.tbis-box.tbis-box-pad > div:nth-child(1) > app-jp-input > p-confirmdialog > div > div > div.ui-dialog-footer.ui-widget-content.ng-tns-c56-7.ng-star-inserted > button.ng-tns-c56-7.ui-confirmdialog-rejectbutton.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icon-left.ng-star-inserted > span.ui-button-text.ui-clickable")
+	WebElement option_NoElement;
 	public LoginIndianRailwaysClass (WebDriver driver) {
 	this.driver = driver;
 	PageFactory.initElements(driver, this);
@@ -360,6 +385,12 @@ public class LoginIndianRailwaysClass {
 	 public void clickOnTheButtonSignInRegistrationPage() {
 		 wait.until(ExpectedConditions.elementToBeClickable(link_SignIn1)).click();
 		}
+	 public void clickOnTheOptionNo() {
+		 wait.until(ExpectedConditions.elementToBeClickable(option_NoElement)).click();
+		}
+	 public void clickOnTheOptionOK() {
+		 wait.until(ExpectedConditions.elementToBeClickable(option_OKElement)).click();
+		}
 	 public void clickOnTheButtonOK() {
 		 wait.until(ExpectedConditions.elementToBeClickable(option_OK)).click();
 		}
@@ -369,11 +400,23 @@ public class LoginIndianRailwaysClass {
 	 public void clickOnTheDDMMYY(){
 		 wait.until(ExpectedConditions.elementToBeClickable(ddMMYY)).click();
 		}
+	 public void clickOnTheDDMMYY1(){
+		 wait.until(ExpectedConditions.elementToBeClickable(ddMMYY)).click();
+		}
 	 public void clickOnTheDart() {
 		 wait.until(ExpectedConditions.elementToBeClickable(dartElement)).click();
 		}
 	 public void clickOnTheChosenDate() {
 		 wait.until(ExpectedConditions.elementToBeClickable(theChosenDataElement)).click();
+		}
+	 public void clickOnTheChosenDate1() {
+		 wait.until(ExpectedConditions.elementToBeClickable(theChosenDataElement1)).click();
+		}
+	 public void clickOnTheChosenDate2() {
+		 wait.until(ExpectedConditions.elementToBeClickable(theChosenDataElement2)).click();
+		}
+	 public void clickOnTheChosenDate3() {
+		 wait.until(ExpectedConditions.elementToBeClickable(theChosenDataElement3)).click();
 		}
 	 public void clickOnTheButtonBookTicket() {
 		 wait.until(ExpectedConditions.elementToBeClickable(button_BookTicket)).click();
@@ -384,8 +427,14 @@ public class LoginIndianRailwaysClass {
 	 public void clickOnTheOptionThursdayAvailable() {
 		 wait.until(ExpectedConditions.elementToBeClickable(option_ThursdayAvailable)).click();
 		}
+	 public void clickOnTheOptionMonday() {
+		 wait.until(ExpectedConditions.elementToBeClickable(option_MonElement)).click();
+		}
 	 public void clickOnTheOptionA1() {
 		 wait.until(ExpectedConditions.elementToBeClickable(option_A1)).click();
+		}
+	 public void clickOnTheOptionSL() {
+		 wait.until(ExpectedConditions.elementToBeClickable(option_SL)).click();
 		}
 	 public void clickOnTheRandomClick() {
 		 wait.until(ExpectedConditions.elementToBeClickable(random_ClickElement)).click();
@@ -602,18 +651,61 @@ public class LoginIndianRailwaysClass {
 		 	 return firstPage_UserReg1.isEnabled();
 		}
 	 public boolean verifyNegativeConfirmationMessage() {
+		
 		 wait.until(ExpectedConditions.visibilityOf(negativeConfirmationMessagElement));
 		 	 return negativeConfirmationMessagElement.isDisplayed();
+		}
+	 public boolean verifyErrorMessage() {
+		 wait.until(ExpectedConditions.visibilityOf(errorMessageElement));
+		 	 return errorMessageElement.isDisplayed() || negativeConfirmationMessagElement.isDisplayed() || negativeConfirmationMessageNoElement.isDisplayed();
+		}
+	 public boolean verifyErrorMessage1() {
+		 wait.until(ExpectedConditions.visibilityOf(negativeConfirmationMessagElement));
+		 	 return errorMessageElement.isDisplayed() || negativeConfirmationMessagElement.isDisplayed();
+		}
+	 public boolean verifyInvalidMessage() {
+		 wait.until(ExpectedConditions.visibilityOf(invalidMessageElement));
+		 	 return invalidMessageElement.isDisplayed() || negativeConfirmationMessagElement.isDisplayed();
 		}
 	 public void clickListAllClasses() {
 		 wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#journeyClass > div"))).click();
 		 wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector(".ng-tns-c65-11.ng-star-inserted"), 16));
 		 list_AllClasses.get(1).click();
 	 }
+	 public void clickListAllClasses1() {
+		 wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#journeyClass > div"))).click();
+		 wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector(".ng-tns-c65-11.ng-star-inserted"), 16));
+		 list_AllClasses.get(6).click();
+	 }
+	 public void clickListAllClasses2() {
+		 wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#journeyClass > div"))).click();
+		 wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector(".ng-tns-c65-11.ng-star-inserted"), 16));
+		 list_AllClasses.get(3).click();
+	 }
+	 public void clickListAllClasses3() {
+		 wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#journeyClass > div"))).click();
+		 wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector(".ng-tns-c65-11.ng-star-inserted"), 16));
+		 list_AllClasses.get(4).click();
+	 }
 	 public void clickListGeneralClasses() {
 		 wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#journeyQuota > div"))).click();
 		 wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector(".ui-dropdown-item.ui-corner-all"), 5));
 		 list_GeneralClasses.get(1).click();
+	 }
+	 public void clickListGeneralClasses2() {
+		 wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#journeyQuota > div"))).click();
+		 wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector(".ui-dropdown-item.ui-corner-all"), 5));
+		 list_GeneralClasses.get(0).click();
+	 }
+	 public void clickListGeneralClasses3() {
+		 wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#journeyQuota > div"))).click();
+		 wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector(".ui-dropdown-item.ui-corner-all"), 5));
+		 list_GeneralClasses.get(3).click();
+	 }
+	 public void clickListGeneralClasses4() {
+		 wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#journeyQuota > div"))).click();
+		 wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector(".ui-dropdown-item.ui-corner-all"), 5));
+		 list_GeneralClasses.get(4).click();
 	 }
 	 public boolean verifyListOfCategories2() {
 		 wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("[role=\"tablist\"] li"), 3));
@@ -622,6 +714,10 @@ public class LoginIndianRailwaysClass {
 	 public boolean verifyConfirmationInfoMessage() {
 		 wait.until(ExpectedConditions.visibilityOf(confirmation_MessageInfo));
 		 	 return confirmation_MessageInfo.isDisplayed();
+		}
+	 public boolean verifyConfirmationInfoMessage1() {
+		 wait.until(ExpectedConditions.visibilityOf(confirmation_MessageInfo));
+		 	 return confirmation_MessageInfo.isDisplayed() || errorMessageElement.isDisplayed() || invalidMessageElement.isDisplayed();
 		}
 	 public boolean verifyWholeSecondPage() {
 		 wait.until(ExpectedConditions.visibilityOf(secondPage_UserReg2));
@@ -707,6 +803,10 @@ public class LoginIndianRailwaysClass {
 	        }
 	        return new String(usernameBuffer);
 	    }
+	    public void verifyListDaysCalendar() {
+			wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector(".ng-tns-c58-58.ng-star-inserted td"), 35));
+			list_CalendarDaysElements.get(20).click();
+		}
 	    public void solveCaptchaManually1() {
 	        System.out.println("Please solve the CAPTCHA manually and press Enter to continue...");
 	        try {
@@ -715,7 +815,7 @@ public class LoginIndianRailwaysClass {
 	            e.printStackTrace();
 	        }
 
-	      
+	     
 	    }
 	}
 
