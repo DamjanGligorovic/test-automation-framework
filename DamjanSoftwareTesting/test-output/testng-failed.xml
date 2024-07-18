@@ -3,14 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="projectIndianRailways.TestIndianRailwaysClass">
+      <class name="projectZudua.TestClass">
         <methods>
-          <include name="initialization"/>
+          <include name="closeDriver"/>
           <include name="deleteCookie"/>
+          <include name="setUp"/>
+          <include name="testCase1"/>
+          <include name="initialization"/>
           <include name="navigation"/>
-          <include name="fillOutLoginFormPageAndBookTicket4"/>
         </methods>
-      </class> <!-- projectIndianRailways.TestIndianRailwaysClass -->
+      </class> <!-- projectZudua.TestClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
