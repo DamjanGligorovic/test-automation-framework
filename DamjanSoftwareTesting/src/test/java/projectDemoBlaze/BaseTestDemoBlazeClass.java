@@ -19,7 +19,6 @@ public class BaseTestDemoBlazeClass {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		loginPage = new LoginPageDemoBlaze (driver);
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 	}
 	@AfterTest
 public void closeDriver() {
