@@ -204,6 +204,7 @@ public class TestIndianRailwaysClass extends BaseIndianRailwaysClass {
         bookTicket.typeIntoTheFieldBoardingStation("HARDA");
 		bookTicket.clickOnTheGetTrainChart();
 		assertTrue(bookTicket.verifyReservation());
+		//End test
 	}
 	
 	public void verifyDriver() {
