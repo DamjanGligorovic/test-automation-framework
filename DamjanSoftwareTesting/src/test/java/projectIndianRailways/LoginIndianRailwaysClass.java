@@ -263,6 +263,40 @@ public class LoginIndianRailwaysClass {
 	WebElement option_OKElement;
 	@FindBy(css="#divMain > div > app-main-page > div > div > div.level_2.slanted-div > div.col-xs-12.remove-padding.tbis-box.tbis-box-pad > div:nth-child(1) > app-jp-input > p-confirmdialog > div > div > div.ui-dialog-footer.ui-widget-content.ng-tns-c56-7.ng-star-inserted > button.ng-tns-c56-7.ui-confirmdialog-rejectbutton.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icon-left.ng-star-inserted > span.ui-button-text.ui-clickable")
 	WebElement option_NoElement;
+	//Charts booking system
+	@FindBy(css="#divMain > div > app-main-page > div > div > div.level_2.slanted-div > div.col-xs-12.remove-padding.tbis-box.tbis-box-pad > div:nth-child(1) > div.hidden-xs > div.text-center.pull-right > a")
+	WebElement button_chartsElement;
+	@FindBy(css ="div.css-1hwfws3 > div > div > input")
+	List<WebElement> inputField_TrainName;
+	@FindBy(css = "#root > div > div > div.jss2.jss41.jss53.jss65.jss77.jss181 > div > div > div > div > label.jss406.jss407 > div > div > div > div.css-1hwfws3 > div.css-xp4uvy")
+	WebElement option_TrainName;
+	@FindBy(name = "trainNumber")
+	WebElement option12321;
+	@FindBy(css="#react-select-4-input")
+	WebElement inputField_TrainName1;
+	@FindBy(css="#root > div > div > div.jss2.jss41.jss53.jss65.jss77.jss181 > div > div > div > div > div:nth-child(2) > div > div > input")
+	WebElement inputField_Calendar;
+	@FindBy(css="body > div.mui-fixed.jss204.jss380 > div.jss383.jss381 > div > div.jss655.jss479 > div.jss672.jss659 > div > div:nth-child(3) > div:nth-child(7) > button")
+	WebElement options_DaysElement;
+	@FindBy(css="#react-select-5-input")
+	WebElement inputField_BoardingStationElement;
+	@FindBy(css="#root > div > div > div.jss2.jss41.jss53.jss65.jss77.jss181 > div > div > div > div > div:nth-child(4) > button")
+	WebElement inputField_GetTrainChartElement;
+	@FindBy(css="div.css-1hwfws3 > div > div > input")
+	List<WebElement> option_BoardingStationElements;
+	@FindBy(css="[name=\"boardingStation\"]")
+	WebElement inputFieldMenuBoardingStatElement;
+	@FindBy(css="#react-select-5-input")
+	WebElement boarding_InputField_StationElement;
+	@FindBy(id="react-select-5-input")
+	WebElement boardingStationInput;
+	//ProbeSelectors
+	@FindBy(css="#react-select-5-input")
+	WebElement inputField_BoardingStation;
+	@FindBy(css="#react-select-5-input")
+	WebElement inputField_BoardingStation1;
+	@FindBy(css="#root > div > header.jss107.jss113.jss98.jss102.jss104 > div > div.jss1.jss18 > h6")
+	WebElement reservationElement;
 	public LoginIndianRailwaysClass (WebDriver driver) {
 	this.driver = driver;
 	PageFactory.initElements(driver, this);
@@ -270,7 +304,30 @@ public class LoginIndianRailwaysClass {
 	wait = new WebDriverWait(driver, Duration.ofSeconds(15));	
 
 	}
+	///Probe methods
+	 public void clickOnTheFieldBoardingStation() {
+		 wait.until(ExpectedConditions.elementToBeClickable(inputField_BoardingStation)).click();
+	    }
+	 public boolean verifyReservation() {
+		return reservationElement.isDisplayed();
+	}
+	 public void typeIntoTheFieldBoardingStation(String input) {
+		 wait.until(ExpectedConditions.visibilityOf(inputField_BoardingStation));
+		 inputField_BoardingStation.clear();
+		 inputField_BoardingStation.sendKeys(input);
+      actions.moveToElement(inputField_BoardingStation1).sendKeys(Keys.ENTER).build().perform();
+	 }
 	//Inserting Methods----------------------------------------------------------------------------------------------------------------------------
+
+	
+	
+	public void typeInputFieldUBoardingStationName(String input) {
+		wait.until(ExpectedConditions.elementToBeClickable(inputFieldMenuBoardingStatElement));
+		inputFieldMenuBoardingStatElement.click();
+		inputFieldMenuBoardingStatElement.clear();
+		inputFieldMenuBoardingStatElement.sendKeys(input);
+	}
+	
 	public void typeInputFieldUserNameLoginpage(String input) {
 		wait.until(ExpectedConditions.visibilityOf(inputField_UserNameElement));
 		inputField_UserNameElement.clear();
@@ -282,7 +339,9 @@ public class LoginIndianRailwaysClass {
 		inputField_PasswordElement.sendKeys(input);
 	}
 	
-	
+	public void verifyInputTrainName1() {
+		actions.moveToElement(inputField_TrainName1).sendKeys(Keys.ENTER).build().perform();
+	}
 	public void typeInputFieldFlat(String input) {
 		wait.until(ExpectedConditions.visibilityOf(inputField_FlatDoorBlockNo));
 		inputField_FlatDoorBlockNo.clear();
@@ -374,6 +433,14 @@ public class LoginIndianRailwaysClass {
 		 inputField_ISD.clear();
 		 inputField_ISD.sendKeys(input);
 	}
+	 public void typeInputFieldBoardingStation (String input) {
+		 wait.until(ExpectedConditions.visibilityOf(inputField_BoardingStationElement));
+		 inputField_BoardingStationElement.clear();
+		 inputField_BoardingStationElement.sendKeys(input);
+	}
+	 public void typeInputFieldBoardingStation1 () {
+		actions.moveToElement(inputField_BoardingStationElement).sendKeys(Keys.ENTER).build().perform();
+	}
 	 public void typeInputDate (String input) {
 		 
 
@@ -381,12 +448,53 @@ public class LoginIndianRailwaysClass {
 		 input_ddMMYYElement.clear();
 		 input_ddMMYYElement.sendKeys(input);
 	}
+public void typeInputTrainName(String input) {
+		 
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div.css-1hwfws3 > div > div > input"), 2));
+		inputField_TrainName.clear();
+		inputField_TrainName.get(0).sendKeys(input);
+}
+public void typeInputBoardingStation(String input) {
+	 
+	wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("div.css-1hwfws3 > div > div > input"), 2));
+	option_BoardingStationElements.get(1).click();
+	option_BoardingStationElements.clear();
+	option_BoardingStationElements.get(1).sendKeys(input);
+}
+
+public void typeInputBoardingStationID() {
+	 
+	wait.until(ExpectedConditions.visibilityOf(boarding_InputField_StationElement));
+	boarding_InputField_StationElement.click();
+}
+public void typeInputBoardingStation2() {
+	 
+	actions.moveToElement(inputField_BoardingStationElement).sendKeys(Keys.ENTER).build().perform();
+}
+public void typeCalendarDaysList() {
+	 
+	wait.until(ExpectedConditions.elementToBeClickable(options_DaysElement)).click();
+}
+
 	 //Clicking Methods-----------------------------------------------------------------------------------------------------------------------------------------
 	 public void clickOnTheButtonSignInRegistrationPage() {
 		 wait.until(ExpectedConditions.elementToBeClickable(link_SignIn1)).click();
 		}
+	 public void clickOnTheCharts(String input) {
+	        ((JavascriptExecutor) driver).executeScript("arguments[0].removeAttribute('target')", button_chartsElement);
+
+		 wait.until(ExpectedConditions.elementToBeClickable(button_chartsElement)).click();
+		 
+
+		}
 	 public void clickOnTheOptionNo() {
 		 wait.until(ExpectedConditions.elementToBeClickable(option_NoElement)).click();
+		}
+	 public void clickOnTheGetTrainChart() {
+		 wait.until(ExpectedConditions.elementToBeClickable(inputField_GetTrainChartElement)).click();
+		}
+	 public void clickOnTheCalendar() {
+		 wait.until(ExpectedConditions.elementToBeClickable(inputField_Calendar)).click();
 		}
 	 public void clickOnTheOptionOK() {
 		 wait.until(ExpectedConditions.elementToBeClickable(option_OKElement)).click();
@@ -496,6 +604,9 @@ public class LoginIndianRailwaysClass {
 		}
 	 public void clickOnTheDate() {
 		 wait.until(ExpectedConditions.elementToBeClickable(menu_DateOfBirth)).click();
+		}
+	 public void clickOnTheOptionTrainMumbai() {
+		 wait.until(ExpectedConditions.elementToBeClickable(option12321)).click();
 		}
 	 
 	 public void clickOnTheTermsAndCondition() {

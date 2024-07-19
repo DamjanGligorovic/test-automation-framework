@@ -22,10 +22,10 @@ public class BaseIndianRailwaysClass {
 		bookTicket = new LoginIndianRailwaysClass (driver);
 
 	}
-	//@AfterTest
-	//public void closeDriver() {
-	//	driver.quit();
-	//}
+	@AfterTest
+	public void closeDriver() {
+		driver.quit();
+	}
 	 
  
 	

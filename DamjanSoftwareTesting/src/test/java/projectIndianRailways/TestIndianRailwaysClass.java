@@ -1,6 +1,7 @@
 package projectIndianRailways;
 
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.time.Duration;
@@ -195,6 +196,16 @@ public class TestIndianRailwaysClass extends BaseIndianRailwaysClass {
 
 	    }
 	@Test
+	public void verifyChartTrainBookingSystem() {
+	    driver.get("https://www.irctc.co.in/nget/train-search?a=1-2,570-690");
+		bookTicket.clickOnTheCharts("MUMBAI");
+		bookTicket.typeInputTrainName("MUMBAI");
+		bookTicket.verifyInputTrainName1();
+        bookTicket.typeIntoTheFieldBoardingStation("HARDA");
+		bookTicket.clickOnTheGetTrainChart();
+		assertTrue(bookTicket.verifyReservation());
+	}
+	
 	public void verifyDriver() {
 	    driver.get("https://www.irctc.co.in/nget/train-search");
 	    String title = driver.getTitle();
