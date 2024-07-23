@@ -27,7 +27,7 @@ public class TestZuduaClass extends BaseZuduaClass {
 		bookPage.verifyFirstItemName();
 		
 	}
-	//2.Element
+	//2.Element - 
 	@Test
 	public void testCase2() throws InterruptedException {
 		Thread.sleep(500);
