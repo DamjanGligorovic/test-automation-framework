@@ -1,0 +1,23 @@
+{
+  "name": "cypress-automation-framework",
+  "version": "1.0.0",
+  "description": "Cypress Automation Framework",
+  "main": "index.js",
+  "scripts": {
+    "triggerAllTests-headless": "npx cypress run",
+    "triggerAllTests-headed": "npx cypress run --headed",
+    "triggerAllTests-chrome": "npx cypress run --browser chrome",
+    "triggerAllTests-dashboard": "npx cypress run --record --key 8744402d-0756-4b27-bc49-8789a0790df0",
+    "triggerAllTests-tests": "npx cypress run --spec cypress/tests/*"
+  },
+  "author": "Damjan Gligorovic",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.13.2",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-multi-reporters": "^1.6.4",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}
