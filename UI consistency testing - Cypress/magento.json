@@ -1,0 +1,13 @@
+{
+    "items": [
+      {
+        "name": "Item 1",
+        "price": "$10.00",
+        "description": "Description for Item 1"
+      }
+    ],
+    "homepageTitle": "Welcome to Magento",
+    "bannerText": "Big Sale - Up to 50% off!",
+    "footerText": "© 2024 Magento Store"
+  }
+  
