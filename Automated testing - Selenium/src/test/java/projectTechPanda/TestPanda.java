@@ -22,7 +22,7 @@ public class TestPanda extends BasePanda {
       loginPage.verifyAddingMessage();
       loginPage.typeCode("GURU50");
       loginPage.clickButtonApply();
-      loginPage.verifyCouponMessage();
+      loginPage.verifyCouponMessage1();
       Assert.assertTrue(loginPage.convertPrices(), "The difference between the subtotal and discount prices does not match the total price");
    }
 }
