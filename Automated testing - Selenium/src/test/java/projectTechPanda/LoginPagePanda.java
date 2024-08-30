@@ -1,4 +1,3 @@
-/* Decompiler 363ms, total 540ms, lines 120 */
 package projectTechPanda;
 
 import java.time.Duration;
@@ -64,14 +63,14 @@ public class LoginPagePanda {
    }
 
    public void clickOnTheMobile() {
-      ((WebElement)this.wait.until(ExpectedConditions.elementToBeClickable(this.mobileLink))).click();
-      ((WebElement)this.wait.until(ExpectedConditions.elementToBeClickable(this.addToCart))).click();
+      ((WebElement)wait.until(ExpectedConditions.elementToBeClickable(mobileLink))).click();
+      ((WebElement)wait.until(ExpectedConditions.elementToBeClickable(addToCart))).click();
    }
 
    public boolean convertPrices() {
-      String subtotalPriceText = this.subtotalPrice.getText().replaceAll("[^\\d.]", "");
-      String discountPriceText = this.discountPrice.getText().replaceAll("[^\\d.]", "");
-      String totalPriceText = this.totalPrice.getText().replaceAll("[^\\d.]", "");
+      String subtotalPriceText = subtotalPrice.getText().replaceAll("[^\\d.]", "");
+      String discountPriceText = discountPrice.getText().replaceAll("[^\\d.]", "");
+      String totalPriceText = totalPrice.getText().replaceAll("[^\\d.]", "");
       Double subtotalPriceValue = Double.valueOf(subtotalPriceText);
       Double discountPriceValue = Double.valueOf(discountPriceText);
       double difference = subtotalPriceValue - discountPriceValue;
@@ -94,27 +93,27 @@ public class LoginPagePanda {
    }
 
    public boolean verifyAddingMessage() {
-      return this.confirmationMessageAdding.isDisplayed();
+      return confirmationMessageAdding.isDisplayed();
    }
 
    public void typeCode(String text) {
-      this.wait.until(ExpectedConditions.visibilityOf(this.couponCode));
-      this.couponCode.sendKeys(new CharSequence[]{text});
+      wait.until(ExpectedConditions.visibilityOf(couponCode));
+      couponCode.sendKeys(new CharSequence[]{text});
    }
 
    public void clickButtonApply() {
-      ((WebElement)this.wait.until(ExpectedConditions.elementToBeClickable(this.buttonApply))).click();
+      ((WebElement)wait.until(ExpectedConditions.elementToBeClickable(buttonApply))).click();
    }
 
    public boolean verifyCouponMessage() {
-      return this.verifyingConfirmationCouponMessage.isDisplayed();
+      return verifyingConfirmationCouponMessage.isDisplayed();
    }
 
    public String verifySubotalPrice() {
-      return this.subtotalPrice.getText();
+      return subtotalPrice.getText();
    }
 
    public String verifySDiscountPrice() {
-      return this.discountPrice.getText();
+      return discountPrice.getText();
    }
 }
