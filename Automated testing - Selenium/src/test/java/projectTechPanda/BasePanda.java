@@ -15,7 +15,7 @@ public class BasePanda {
    public void initialization() {
       this.driver = new ChromeDriver();
       this.driver.manage().window().maximize();
-      this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20L));
+      this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
       this.loginPage = new LoginPagePanda(this.driver);
    }
 
