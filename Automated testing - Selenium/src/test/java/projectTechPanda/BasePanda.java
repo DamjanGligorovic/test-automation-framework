@@ -1,4 +1,3 @@
-/* Decompiler 461ms, total 844ms, lines 26 */
 package projectTechPanda;
 
 import java.time.Duration;
@@ -13,14 +12,14 @@ public class BasePanda {
 
    @BeforeTest
    public void initialization() {
-      this.driver = new ChromeDriver();
-      this.driver.manage().window().maximize();
-      this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-      this.loginPage = new LoginPagePanda(this.driver);
+      driver = new ChromeDriver();
+      driver.manage().window().maximize();
+      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+      loginPage = new LoginPagePanda(driver);
    }
 
    @AfterTest
    public void closeDriver() {
-      this.driver.quit();
+      driver.quit();
    }
 }
