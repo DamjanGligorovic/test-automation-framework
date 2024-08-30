@@ -105,15 +105,15 @@ public class LoginPagePanda {
       ((WebElement)wait.until(ExpectedConditions.elementToBeClickable(buttonApply))).click();
    }
 
-   public boolean verifyCouponMessage() {
+   public boolean verifyCouponMessage1() {
       return verifyingConfirmationCouponMessage.isDisplayed();
    }
 
-   public String verifySubotalPrice() {
+   public String verifySubotalPrice1() {
       return subtotalPrice.getText();
    }
 
-   public String verifySDiscountPrice() {
+   public String verifyDiscountPrice() {
       return discountPrice.getText();
    }
 }
